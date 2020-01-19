@@ -6,17 +6,17 @@ description: >-
 
 # Service
 
-## Estrutura de Services
+## Estrutura dos Services
 
 Na pasta `app/` existem uma série de documentos que estão pré-configurados e prontos para serem estendidos. Dentre estes temos alguns que são destinados para a criação do nossos serviços.
 
-Um service criado para resolver as operações básicas vai estender de `Rest` e terá uma sintaxe parecida com a imagem abaixo.
-
-![](../.gitbook/assets/image%20%2823%29.png)
-
 Caso o `service` em questão não vá atender um `CRUD` é possível estender apenas de `Http` e ter acesso apenas aos métodos referentes aos verbos `HTTP`.
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![Exemplo de service que usa apenas a classe Http](../.gitbook/assets/image%20%2821%29.png)
+
+Um service criado para resolver as operações básicas vai estender de `Rest` e terá uma sintaxe parecida com a imagem abaixo.
+
+![Service Rest simples](../.gitbook/assets/image%20%2823%29.png)
 
 ### Http
 
@@ -31,10 +31,4 @@ Para se adaptar à diferentes APIs existe em `src/settings/rest.js` duas funçõ
 {% endhint %}
 
 ![](../.gitbook/assets/image%20%2812%29.png)
-
-## Criando um Service
-
-Dentro desta pasta crie um arquivo settings
-
-
 

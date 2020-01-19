@@ -1,8 +1,8 @@
 ---
-description: Orientações sobre como utilizar e estender a estrutura básica montada
+description: Descrição detalhada da estrutura básica montada
 ---
 
-# Como Utilizar
+# Estrutura
 
 ## Visão Geral
 
