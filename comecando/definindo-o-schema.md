@@ -8,23 +8,88 @@ description: >-
 
 ### Criando o Schema
 
-Para criar um `schema` para a entidade `Action` vamos criar dentro da pasta `Schema` do domínio um arquivo `ActionSchema.js` \(`src/domains/Admin/Action/Schema/ActionSchema.js`\). Este arquivo deverá estender a classe `Schema`. O resultado inicial será um documento como o da imagem a seguir.
+Para criar um `schema` para a entidade `Category` vamos criar dentro da pasta `Schema` do domínio um arquivo `CategorySchema.js` \(`src/domains/General/Category/Schema/CategorySchema.js`\). Este arquivo deverá estender a classe `Schema`. O resultado inicial será um documento como o da imagem a seguir.
 
-![](../.gitbook/assets/image%20%2825%29.png)
+{% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
+```javascript
+import Schema from 'src/app/Agnostic/Schema'
+
+/**
+ * @class {CategorySchema}
+ */
+export default class CategorySchema extends Schema {
+  construct () {
+  }
+}
+
+```
+{% endcode %}
 
 ### Importando Recursos
 
 Esta definição é a mais básica que podemos fazer para esta classe porque o método `construct` deve ser implementado mesmo nessa primeira versão. Além desse método vamos fazer mais algumas configurações, informando na estrutura da classe as propriedades: `domain`, `path` e `service`. 
 
-![](../.gitbook/assets/image%20%282%29.png)
+{% code title="" %}
+```javascript
+import Schema from 'src/app/Agnostic/Schema'
+import CategoryService from 'src/domains/General/Category/Schema/CategoryService'
+import { path, domain } from 'src/domains/General/Category/settings'
 
-As propriedades estáticas `domain` e `path` são importados do `settings.js` que definimos em [Configurando o domínio](configurando-o-dominio.md) e a propriedade `service` é o arquivo `ActionService.js` que criamos em [Preparando o acesso à API](criando-o-service.md).
+/**
+ * @class {CategorySchema}
+ */
+export default class CategorySchema extends Schema {
+  /**
+   * @type {string}
+   */
+  static domain = domain
+
+  /**
+   * @type {string}
+   */
+  static path = path
+
+  /**
+   * @type {Rest}
+   */
+  service = CategoryService
+
+  /**
+   * Configure schema
+   */
+  construct () {
+  }
+}
+
+```
+{% endcode %}
+
+As propriedades estáticas `domain` e `path` são importados do `settings.js` que definimos em [Configurando o domínio](configurando-o-dominio.md) e a propriedade `service` é o arquivo `CategoryService.js` que criamos em [Preparando o acesso à API](criando-o-service.md).
 
 ### Criando o Campo `name`
 
 Com o nosso schema inciado vamos configurar os campos que serão usados pela entidade. Para isso vamos usar o método `addField` que deve ser chamado dentro do `construct`.
 
-![](../.gitbook/assets/image%20%2818%29.png)
+{% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
+```javascript
+// ...
+
+/**
+ * @class {CategorySchema}
+ */
+export default class CategorySchema extends Schema {
+  // ...
+
+  /**
+   * Configure schema
+   */
+  construct () {
+    this.addField('name')
+  }
+}
+
+```
+{% endcode %}
 
 Na imagem acima declaramos que o nosso `schema` irá trabalhar com o campo `name`.  Por padrão um campo criado não é exibido na `table` e é exibido no `form` com uma largura que ocupa 100% da linha num campo de texto. O campo `primaryKey` é carregado de forma implícita em todos os filhos de `Schema`. Portanto, nossa classe está mapeando dois campos: `id` e `name`. Mais adiante veremos as configurações dos campos e tudo que podemos fazer com eles, além de outros recursos configuráveis nos nossos [`schema`](../como-utilizar/schema.md).
 
