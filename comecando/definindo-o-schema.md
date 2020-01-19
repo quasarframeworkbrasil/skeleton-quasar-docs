@@ -29,10 +29,10 @@ export default class CategorySchema extends Schema {
 
 Esta definição é a mais básica que podemos fazer para esta classe porque o método `construct` deve ser implementado mesmo nessa primeira versão. Além desse método vamos fazer mais algumas configurações, informando na estrutura da classe as propriedades: `domain`, `path` e `service`. 
 
-{% code title="" %}
+{% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
 import Schema from 'src/app/Agnostic/Schema'
-import CategoryService from 'src/domains/General/Category/Schema/CategoryService'
+import Service from 'src/domains/General/Category/Schema/CategoryService'
 import { path, domain } from 'src/domains/General/Category/settings'
 
 /**
@@ -52,7 +52,7 @@ export default class CategorySchema extends Schema {
   /**
    * @type {Rest}
    */
-  service = CategoryService
+  service = Service
 
   /**
    * Configure schema
@@ -95,5 +95,7 @@ No trecho de código acima declaramos que o nosso `schema` irá trabalhar com o 
 
 No próximo passo veremos como adicionar algumas rotas para podemos ver nossa tela sendo renderizada.
 
-{% page-ref page="adicionando-rotas.md" %}
+{% page-ref page="criando-as-views.md" %}
+
+
 
