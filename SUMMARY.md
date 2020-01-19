@@ -1,13 +1,12 @@
 # Table of contents
 
-* [Manual do Usuário](README.md)
-* [Novos Projetos](novos-projetos.md)
-* [Projetos Existentes](projetos-existentes.md)
+* [Instalação](README.md)
 * [Começando](comecando/README.md)
   * [Iniciando o domínio](comecando/iniciando-o-dominio.md)
   * [Configurando o domínio](comecando/configurando-o-dominio.md)
-  * [Criando o service](comecando/criando-o-service.md)
+  * [Preparando o acesso à API](comecando/criando-o-service.md)
   * [Adicionando rotas](comecando/adicionando-rotas.md)
+* [Conceitos](conceitos.md)
 * [Estrutura](como-utilizar/README.md)
   * [Module](como-utilizar/compondo-leiautes.md)
   * [Domain](como-utilizar/domain.md)
@@ -19,6 +18,7 @@
 * [Customização](customizacao/README.md)
   * [Component](customizacao/customizando-components.md)
   * [View](customizacao/customizando-views.md)
+* [Projetos Existentes](projetos-existentes.md)
 * [Por Debaixo do Capô](por-debaixo-do-capo.md)
 * [Como Contribuir](como-contribuir.md)
 

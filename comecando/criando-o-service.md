@@ -1,4 +1,4 @@
-# Criando o service
+# Preparando o acesso à API
 
 Seguindo com nosso exemplo, vamos criar dentro de `src/domains/Admin/Action` uma pasta chamada `Schema`. Dentro desta pasta crie um arquivo chamado `ActionService.js`, tendo no final um caminho `src/domains/Admin/Action/Schema/ActionService.js`. 
 
