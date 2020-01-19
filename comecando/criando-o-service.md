@@ -12,7 +12,7 @@ Seguindo com nosso exemplo, vamos criar dentro de `src/domains/General/Category`
 Estes caminhos podem variar de acordo com as necessidades de cada um e estão aqui apenas como sugestão. Com um pouco de experiência é possível compreender o que está sendo feito e usar da forma que julgar conveniente
 {% endhint %}
 
-O conteúdo desse documento será uma classe semelhante a imagem abaixo. Ao estender a class `Rest` a class `CategoryService` herda todos os comportamentos dela. Estes comportamentos englobam métodos que fazem a criação, leitura, atualização e deleção de recursos da entidade `Category`.
+O conteúdo desse documento será uma classe semelhante no trecho abaixo. Ao estender a class `Rest` a class `CategoryService` herda todos os comportamentos dela. Estes comportamentos englobam métodos que fazem a criação, leitura, atualização e deleção de recursos da entidade `Category`.
 
 {% code title="CategoryService.js" %}
 ```javascript

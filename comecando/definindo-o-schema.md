@@ -8,7 +8,7 @@ description: >-
 
 ### Criando o Schema
 
-Para criar um `schema` para a entidade `Category` vamos criar dentro da pasta `Schema` do domínio um arquivo `CategorySchema.js` \(`src/domains/General/Category/Schema/CategorySchema.js`\). Este arquivo deverá estender a classe `Schema`. O resultado inicial será um documento como o da imagem a seguir.
+Para criar um `schema` para a entidade `Category` criaremos dentro da pasta `Schema` do domínio um arquivo `CategorySchema.js` \(`src/domains/General/Category/Schema/CategorySchema.js`\). Este arquivo deverá estender a classe `Schema`. O resultado inicial será um documento como o do trecho a seguir.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
@@ -91,7 +91,7 @@ export default class CategorySchema extends Schema {
 ```
 {% endcode %}
 
-Na imagem acima declaramos que o nosso `schema` irá trabalhar com o campo `name`.  Por padrão um campo criado não é exibido na `table` e é exibido no `form` com uma largura que ocupa 100% da linha num campo de texto. O campo `primaryKey` é carregado de forma implícita em todos os filhos de `Schema`. Portanto, nossa classe está mapeando dois campos: `id` e `name`. Mais adiante veremos as configurações dos campos e tudo que podemos fazer com eles, além de outros recursos configuráveis nos nossos [`schema`](../como-utilizar/schema.md).
+No trecho de código acima declaramos que o nosso `schema` irá trabalhar com o campo `name`.  Por padrão um campo criado não é exibido na `table` e é exibido no `form` com uma largura que ocupa 100% da linha num campo de texto. O campo `primaryKey` é carregado de forma implícita em todos os filhos de `Schema`. Portanto, nossa classe está mapeando dois campos: `id` e `name`. Mais adiante veremos as configurações dos campos e tudo que podemos fazer com eles, além de outros recursos configuráveis nos nossos [`schema`](../como-utilizar/schema.md).
 
 No próximo passo veremos como adicionar algumas rotas para podemos ver nossa tela sendo renderizada.
 
