@@ -8,3 +8,9 @@ Estes caminhos podem variar de acordo com as necessidades de cada um e estão aq
 
 O conteúdo desse documento será algo como
 
+![](../.gitbook/assets/image%20%288%29.png)
+
+Note o uso da propriedade `resource` que é importada do `settings.js`. Esta classe será usada posteriormente para prover acesso aos endpoints da entidade.
+
+{% page-ref page="adicionando-rotas.md" %}
+

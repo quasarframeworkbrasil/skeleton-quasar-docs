@@ -13,7 +13,7 @@ Em `src/router/index.js` fica a criação do roteador da aplicação. Há alguns
 
 Logo do começo do `index.js` será possível ver que há um import para um arquivo chamado `AppRouter.` Isto será visto em um trecho parecido com o trecho abaixo.
 
-![](../.gitbook/assets/image%20%287%29.png)
+![](../.gitbook/assets/image%20%289%29.png)
 
 Este arquivo é uma classe que estende o `VueRouter` permitindo modificar, aprimorar e adicionar comportamentos ao roteador.
 
@@ -37,7 +37,7 @@ O `RouteFile` do `module` Auth fica em `src/modules/Auth/router/routeFile.js` e 
 
 Alocado em `src/modules/Dashboard/router/routeFile.js` a composição de rotas do `Dashboard` será bem mais extensa que a do `Auth`. Este `module` irá abrigar todo "painel de controle", por isso ao invés de definir todas as rotas nele mesmo são feitos imports de outros arquivos de rota. As demais rotas ficam junto do domínio do Schema e devem exportar sempre arrays. Para poder acessar os recursos que serão criados será preciso registar as rotas que criarmos nesse arquivo, por isso ele será lembrado mais pra frente.
 
-![](../.gitbook/assets/image%20%2814%29.png)
+![](../.gitbook/assets/image%20%2816%29.png)
 
 
 
