@@ -44,6 +44,8 @@ export default {
 ```
 {% endcode %}
 
+Este `form` será responsável por definir a exibição dos dados da entidade.
+
 {% code title="src/views/dashboard/general/category/CategoryTable.vue" %}
 ```markup
 <template>
@@ -77,6 +79,8 @@ export default {
 
 ```
 {% endcode %}
+
+O componente acima é a `table` que será usada para exibir os registros que serão consumidos pelo serviço que criamos.
 
 Agora que já criamos o `domain` \(e configuramos\), o `service`, o `schema` e as `views` vamos criar as rotas para poder ver os componentes sendo exibidos.
 
