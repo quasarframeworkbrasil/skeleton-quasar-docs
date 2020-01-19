@@ -4,7 +4,7 @@ description: >-
   propriedades básicas do domínio dela
 ---
 
-# Settings
+# Settings File
 
 ### `path`
 

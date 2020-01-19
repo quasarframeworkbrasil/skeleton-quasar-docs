@@ -4,7 +4,7 @@ description: >-
   importantes para a lógica de negócio da aplicação
 ---
 
-# Service
+# Services
 
 ## Estrutura dos Services
 

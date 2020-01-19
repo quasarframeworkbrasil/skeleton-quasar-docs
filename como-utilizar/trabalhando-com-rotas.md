@@ -5,7 +5,7 @@ description: >-
   ver em projetos Quasar ou Vue
 ---
 
-# Route
+# Routes
 
 Em `src/router/index.js` fica a criação do roteador da aplicação. Há alguns detalhes um pouco diferentes do padrão que o template do [Quasar](https://quasar.dev) entrega. Vamos ver um sobre essas diferenças à seguir.
 

@@ -4,7 +4,7 @@ description: A configuração o domínio é a base para a criação dos artefato
 
 # Configurando o domínio
 
-Dentro desta pasta `src/domains/Admin/Action`  criada anteriormente \(veja [Domain](../como-utilizar/domain.md)\) iremos criar o `settings.js` da entidade `Action`. O caminho final desse arquivo então será `src/domains/Admin/Action/settings.js`. 
+Dentro desta pasta `src/domains/Admin/Action`  criada anteriormente \(veja [Domain](../como-utilizar/domain.md)\) iremos criar o `settings.js` da entidade `Action`. O caminho final desse arquivo então será `src/domains/Admin/Action/settings.js`. Os [Settings File](../como-utilizar/settings.md) são documentos que agregam propriedades básicas de configuração do domínio.
 
 Dentro deste arquivo vamos exportar as 3 consts comumente usados por ele: `path`, `domain` e `resource`. 
 

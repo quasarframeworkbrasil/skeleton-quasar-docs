@@ -2,7 +2,7 @@
 description: Cada módulo é um ponto de partida de central para uma estrutura do projeto
 ---
 
-# Module
+# Modules
 
 Os módulos possuem os recursos base para renderizar a estrutura que será usada para montar todas as suas telas filhas. Para isso serão configurados componentes para fazer a apresentação, rotas, gerenciadores de estado e etc. A aplicação já possui dois módulos criados: Auth e Dashboard.
 
