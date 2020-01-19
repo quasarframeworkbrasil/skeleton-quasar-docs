@@ -1,3 +1,9 @@
+---
+description: >-
+  As aplicações front-end precisando se comunicar com serviços que proveem dados
+  e geralmente esses serviços usam HTTP
+---
+
 # Preparando o acesso à API
 
 Seguindo com nosso exemplo, vamos criar dentro de `src/domains/Admin/Action` uma pasta chamada `Schema`. Dentro desta pasta crie um arquivo chamado `ActionService.js`, tendo no final um caminho `src/domains/Admin/Action/Schema/ActionService.js`. 
@@ -12,7 +18,11 @@ O conteúdo desse documento será algo como
 
 Note o uso da propriedade `resource` que é importada do `settings.js`.
 
-Esta classe será usada posteriormente para prover acesso aos endpoints da entidade.
+{% hint style="warning" %}
+Não há uma classe para consumir recursos usando GraphQL, mas a lógica é basicamente a mesma e com algum conhecimento de JavaScript é possível criar uma abstração também para este tipo de serviço
+{% endhint %}
+
+Esta classe será usada a seguir para prover acesso aos endpoints da entidade, vamos seguir para o próximo passo.
 
 {% page-ref page="definindo-o-schema.md" %}
 
