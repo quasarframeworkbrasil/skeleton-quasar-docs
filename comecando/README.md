@@ -16,6 +16,12 @@ Usando o CLI do Quasar podemos fazer
 quasar dev
 ```
 
+Se tiver docker por ai é possível utilizar docker-compose para iniciar o modo de desenvolvimento usando
+
+```bash
+docker-compose up
+```
+
 ### Começando os trabalhos
 
 Depois de feita a instalação e de colocarmos o projeto em modo de desenvolvimento iremos implementar um novo recurso. O recurso que será criado será um cadastro simples de Categoria. O nome desse cadastro será `Category` , que poderia ser usado num cenário real para categorizar qualquer outro cadastro. Use o link abaixo para seguir para o próximo passo.
