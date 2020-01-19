@@ -8,15 +8,15 @@ description: >-
 
 ### Iniciar o modo de desenvolvimento
 
-Para rodar o projeto podemos usar o [CLI do Quasar](https://quasar.dev/quasar-cli/cli-documentation/commands-list#create) devidamente instalado ou Docker.
+Para rodar o projeto podemos usar o [CLI do Quasar](https://quasar.dev/quasar-cli/cli-documentation/commands-list#dev) devidamente instalado ou [Docker](https://docs.docker.com/install).
 
-Usando o CLI do Quasar podemos fazer
+Usando o [CLI do Quasar](https://quasar.dev/quasar-cli/cli-documentation/commands-list#dev) podemos fazer
 
 ```bash
 quasar dev
 ```
 
-Se tiver docker por ai é possível utilizar docker-compose para iniciar o modo de desenvolvimento usando
+Se a estação de trabalho tiver [Docker](https://docs.docker.com/install) + [Docker Compose](https://docs.docker.com/compose/install) é possível utilizar docker-compose para iniciar o modo de desenvolvimento usando
 
 ```bash
 docker-compose up
@@ -27,7 +27,7 @@ docker-compose up
 Depois de feita a instalação e de colocarmos o projeto em modo de desenvolvimento iremos implementar um novo recurso. O recurso que será criado será um cadastro simples de Categoria. O nome desse cadastro será `Category` , que poderia ser usado num cenário real para categorizar qualquer outro cadastro. Use o link abaixo para seguir para o próximo passo.
 
 {% hint style="info" %}
-O exemplo usará a entidade `Category` como referência daqui pra frente
+O exemplo usará a entidade `Category` como referência daqui pra frente, mas sinta-se à vontade para criar o que for mais legal para você
 {% endhint %}
 
 {% page-ref page="iniciando-o-dominio.md" %}
