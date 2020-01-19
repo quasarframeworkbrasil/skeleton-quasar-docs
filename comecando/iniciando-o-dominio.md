@@ -4,7 +4,7 @@ description: A criação do domínio é o primeiro passo para criar um novo recu
 
 # Iniciando o domínio
 
-Vá até a pasta `src/domains/` e crie uma pasta para representar o domínio da entidade com a qual vamos trabalhar. A entidade `Action` na modelagem que vamos usar para este tutorial será alocado no namespace `Admin`. O nome da pasta criada será `Admin/` e dentro dela outra chamada `Action/`.  Sendo assim, ao final desse passo, teremos um diretório criado em `src/domains/Admin/Action` que estará pronto para receber os artefatos que veremos à seguir.
+Vá até a pasta `src/domains/` e crie uma pasta para representar o domínio da entidade com a qual vamos trabalhar. A entidade `Category` na modelagem que vamos usar para este tutorial será alocado no namespace `General`. O nome da pasta criada será `General/` e dentro dela outra chamada `Category/`.  Sendo assim, ao final desse passo, teremos um diretório criado em `src/domains/General/Category` que estará pronto para receber os artefatos que veremos à seguir.
 
 Uma descrição detalhada sobre os domínios pode ser encontrada [aqui](../como-utilizar/domain.md).
 
