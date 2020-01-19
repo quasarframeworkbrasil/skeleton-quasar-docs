@@ -8,7 +8,25 @@ Dentro desta pasta `src/domains/General/Category`  criada anteriormente \(veja [
 
 Dentro deste arquivo vamos exportar as 3 consts comumente usados por ele: `path`, `domain` e `resource`. 
 
-![](../.gitbook/assets/image%20%286%29.png)
+{% code title="src/domains/General/Category/settings.js" %}
+```javascript
+/**
+ * @type {string}
+ */
+export const path = '/dashboard/general/category'
+
+/**
+ * @type {string}
+ */
+export const domain = 'general.category'
+
+/**
+ * @type {string}
+ */
+export const resource = '/general/category'
+
+```
+{% endcode %}
 
 Em [`path`](../como-utilizar/settings.md#path) vamos informar a URL base das telas do domínio que estamos configurando, para ver mais sobre isso confira a página [Settings](../como-utilizar/settings.md#path).
 
