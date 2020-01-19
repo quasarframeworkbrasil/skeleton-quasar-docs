@@ -36,3 +36,5 @@ Por fim em [`resource`](../como-utilizar/settings.md#resource), foi utilizado o 
 
 {% page-ref page="criando-o-service.md" %}
 
+
+

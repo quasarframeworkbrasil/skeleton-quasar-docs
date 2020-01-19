@@ -42,3 +42,5 @@ Esta classe será usada a seguir para prover acesso aos endpoints da entidade, v
 
 {% page-ref page="definindo-o-schema.md" %}
 
+
+

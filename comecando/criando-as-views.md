@@ -86,3 +86,5 @@ Agora que já criamos o `domain` \(e configuramos\), o `service`, o `schema` e a
 
 {% page-ref page="adicionando-rotas.md" %}
 
+
+
