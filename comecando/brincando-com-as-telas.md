@@ -18,6 +18,8 @@ Como podemos ver a tela ficou vazia, além disso foi gerado um erro no console.
 
 A tela está vazia porque o nosso campo ainda está visível na `table` \(além de não ter `label` definido\) e não temos uma `API` para ser consumida. Vamos ver sobre como melhorar isso nos tópicos a seguir.
 
+É possível perceber que vários recursos já são criados por padrão, botões, campo de pesquisa e uma pesquisa avançada lateral vem por padrão quando criamos uma `table` usando o componente que vem incorporado ao projeto. Mais abaixo veremos detalhes sobre eles. Caso ainda tenha dúvida vá até a sessão [Conceitos](../como-utilizar/).
+
 ## Configurando o `schema`
 
 Os `schema` são estruturas que possuem diversos recursos para serem configurados, vamos configurar alguns a seguir. Para ver todas as configurações do `schema` vá até a página do [Schema](../como-utilizar/schema.md).
