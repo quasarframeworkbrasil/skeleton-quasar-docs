@@ -12,11 +12,11 @@ Na pasta `app/` existem uma série de documentos que estão pré-configurados e 
 
 Caso o `service` em questão não vá atender um `CRUD` é possível estender apenas de `Http` e ter acesso apenas aos métodos referentes aos verbos `HTTP`.
 
-![Exemplo de service que usa apenas a classe Http](../.gitbook/assets/image%20%2826%29.png)
+![Exemplo de service que usa apenas a classe Http](../.gitbook/assets/image%20%2827%29.png)
 
 Um service criado para resolver as operações básicas vai estender de `Rest` e terá uma sintaxe parecida com a imagem abaixo.
 
-![Service Rest simples](../.gitbook/assets/image%20%2828%29.png)
+![Service Rest simples](../.gitbook/assets/image%20%2829%29.png)
 
 ### Http
 
@@ -30,5 +30,5 @@ Para suprir os 4 pilares da gestão das entidades ela já conta com os métodos 
 Para se adaptar à diferentes APIs existe em `src/settings/rest.js` duas funções que podem ser adaptadas para extrair os dados da resposta da requisição e passarem para o formato que o projeto espera
 {% endhint %}
 
-![](../.gitbook/assets/image%20%2815%29.png)
+![](../.gitbook/assets/image%20%2816%29.png)
 

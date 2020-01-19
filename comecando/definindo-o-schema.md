@@ -10,7 +10,7 @@ description: >-
 
 Para criar um `schema` para a entidade `Action` vamos criar dentro da pasta `Schema` do domínio um arquivo `ActionSchema.js` \(`src/domains/Admin/Action/Schema/ActionSchema.js`\). Este arquivo deverá estender a classe `Schema`. O resultado inicial será um documento como o da imagem a seguir.
 
-![](../.gitbook/assets/image%20%2824%29.png)
+![](../.gitbook/assets/image%20%2825%29.png)
 
 ### Importando Recursos
 
@@ -24,7 +24,7 @@ As propriedades estáticas `domain` e `path` são importados do `settings.js` qu
 
 Com o nosso schema inciado vamos configurar os campos que serão usados pela entidade. Para isso vamos usar o método `addField` que deve ser chamado dentro do `construct`.
 
-![](../.gitbook/assets/image%20%2817%29.png)
+![](../.gitbook/assets/image%20%2818%29.png)
 
 Na imagem acima declaramos que o nosso `schema` irá trabalhar com o campo `name`.  Por padrão um campo criado não é exibido na `table` e é exibido no `form` com uma largura que ocupa 100% da linha num campo de texto. O campo `primaryKey` é carregado de forma implícita em todos os filhos de `Schema`. Portanto, nossa classe está mapeando dois campos: `id` e `name`. Mais adiante veremos as configurações dos campos e tudo que podemos fazer com eles, além de outros recursos configuráveis nos nossos [`schema`](../como-utilizar/schema.md).
 
