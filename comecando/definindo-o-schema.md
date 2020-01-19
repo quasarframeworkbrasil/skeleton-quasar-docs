@@ -28,5 +28,7 @@ Com o nosso schema inciado vamos configurar os campos que serão usados pela ent
 
 Na imagem acima declaramos que o nosso `schema` irá trabalhar com o campo `name`.  Por padrão um campo criado não é exibido na `table` e é exibido no `form` com uma largura que ocupa 100% da linha num campo de texto. O campo `primaryKey` é carregado de forma implícita em todos os filhos de `Schema`. Portanto, nossa classe está mapeando dois campos: `id` e `name`. Mais adiante veremos as configurações dos campos e tudo que podemos fazer com eles, além de outros recursos configuráveis nos nossos `schema`.
 
+No próximo passo veremos como adicionar algumas rotas para podemos ver nossa tela sendo renderizada.
 
+{% page-ref page="adicionando-rotas.md" %}
 
