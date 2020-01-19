@@ -6,10 +6,22 @@ description: >-
 
 # Começando
 
-Depois de feita a instalação iremos criar um novo recurso no projeto. O recurso que será criado será um cadastro simples para representar as ações que um usuário pode ter  acesso com seu perfil. No nosso caso, num cenário real, esse cadastro seria usado para montar o menu lateral \(à esquerda da tela\) que o usuário veria quando acessasse o painel de controle. O nome desse cadastro será `Action` e será parte. Use o link abaixo para seguir para o próximo passo.
+### Iniciar o modo de desenvolvimento
+
+Para rodar o projeto podemos usar o [CLI do Quasar](https://quasar.dev/quasar-cli/cli-documentation/commands-list#create) devidamente instalado ou Docker.
+
+Usando o CLI do Quasar podemos fazer
+
+```bash
+quasar dev
+```
+
+### Começando os trabalhos
+
+Depois de feita a instalação e de colocarmos o projeto em modo de desenvolvimento iremos implementar um novo recurso. O recurso que será criado será um cadastro simples de Categoria. O nome desse cadastro será `Category` , que poderia ser usado num cenário real para categorizar qualquer outro cadastro. Use o link abaixo para seguir para o próximo passo.
 
 {% hint style="info" %}
-O exemplo usará a entidade `Action` como referência daqui pra frente
+O exemplo usará a entidade `Category` como referência daqui pra frente
 {% endhint %}
 
 {% page-ref page="iniciando-o-dominio.md" %}

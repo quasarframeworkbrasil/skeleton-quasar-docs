@@ -6,6 +6,7 @@
   * [Configurando o domínio](comecando/configurando-o-dominio.md)
   * [Preparando o acesso à API](comecando/criando-o-service.md)
   * [Definindo o schema](comecando/definindo-o-schema.md)
+  * [Criando as views](comecando/criando-as-views.md)
   * [Adicionando rotas](comecando/adicionando-rotas.md)
 * [Conceitos](conceitos.md)
 * [Estrutura](como-utilizar/README.md)
