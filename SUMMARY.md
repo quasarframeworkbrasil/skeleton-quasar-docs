@@ -5,7 +5,7 @@
   * [Iniciando o domínio](comecando/iniciando-o-dominio.md)
   * [Configurando o domínio](comecando/configurando-o-dominio.md)
   * [Preparando o acesso à API](comecando/criando-o-service.md)
-  * [Definindo o Schema](comecando/definindo-o-schema.md)
+  * [Definindo o schema](comecando/definindo-o-schema.md)
   * [Adicionando rotas](comecando/adicionando-rotas.md)
 * [Conceitos](conceitos.md)
 * [Estrutura](como-utilizar/README.md)
