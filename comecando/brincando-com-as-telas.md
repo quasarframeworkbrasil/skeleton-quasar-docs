@@ -8,13 +8,13 @@ description: >-
 
 ## Acessando as telas
 
-Se acessarmos [http://localhost:8080/\#/dashboard/general/category](http://localhost:8080/#/dashboard/general/category) será possível ver a tela que exibe a table da entidade `Category` que criamos \(imaginando que não foi feita nenhuma alteração nas configurações padrão do projeto\). A seguir uma imagem do resultado de abrir o link acima.
+Se acessarmos [`http://localhost:8080/#/dashboard/general/category`](http://localhost:8080/#/dashboard/general/category) será possível ver a tela que exibe a table da entidade `Category` que criamos \(imaginando que não foi feita nenhuma alteração nas configurações padrão do projeto\). A seguir uma imagem do resultado de abrir o link acima.
 
-![](../.gitbook/assets/image%20%2824%29.png)
+![](../.gitbook/assets/image%20%2826%29.png)
 
 Como podemos ver a tela ficou vazia, além disso foi gerado um erro no console.
 
-![](../.gitbook/assets/image%20%2826%29.png)
+![](../.gitbook/assets/image%20%2828%29.png)
 
 A tela está vazia porque o nosso campo ainda está visível na `table` \(além de não ter `label` definido\) e não temos uma `API` para ser consumida.
 
@@ -101,5 +101,25 @@ export default {
 
 ### Exibindo o campo na `table`
 
+Para exibir um campo na `table` podemos chamar o método `fieldTableShow`.
 
+{% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
+```javascript
+ // ...
+   /**
+   * Configure schema
+   */
+   construct () {
+    this.addField('name')
+      .fieldTableShow()
+   }
+ // ...
+```
+{% endcode %}
+
+Com a internacionalização definida e o campo configurado para ser visível podemos ver que a tela da aplicação agora mostra o campo Nome.
+
+![](../.gitbook/assets/image%20%283%29.png)
+
+![](../.gitbook/assets/image%20%2825%29.png)
 
