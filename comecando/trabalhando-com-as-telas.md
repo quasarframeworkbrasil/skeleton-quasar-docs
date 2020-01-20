@@ -10,11 +10,11 @@ description: >-
 
 Se acessarmos [`http://localhost:8080/#/dashboard/general/category`](http://localhost:8080/#/dashboard/general/category) será possível ver a tela que exibe a `table` da entidade `Category` que criamos \(imaginando que não foi feita nenhuma alteração nas configurações padrão do projeto\). A seguir uma imagem do resultado que pode ser visto após abrir o link acima.
 
-![](../.gitbook/assets/image%20%2827%29.png)
+![](../.gitbook/assets/image%20%2828%29.png)
 
 Como podemos ver a tela ficou vazia e também foi gerado um erro no console.
 
-![](../.gitbook/assets/image%20%2829%29.png)
+![](../.gitbook/assets/image%20%2830%29.png)
 
 A tela está vazia porque o nosso campo ainda está visível na `table` \(além de não ter `label` definido\) e não temos uma `API` para ser consumida. Vamos ver sobre como melhorar isso nos tópicos a seguir.
 
@@ -103,6 +103,8 @@ export default {
 
 ### Trabalhando com a `table`
 
+Como visto mais acima a tabela que lista os registros de Category está disponível na URL [`http://localhost:8080/#/dashboard/general/category`](http://localhost:8080/#/dashboard/general/category).
+
 Para exibir um campo na `table` podemos chamar o método `fieldTableShow`.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
@@ -142,7 +144,7 @@ A table possui um campo de pesquisa, para colocar o campo para aparecer lá pode
 
 O resultado será algo como a imagem abaixo.
 
-![](../.gitbook/assets/image%20%2826%29.png)
+![](../.gitbook/assets/image%20%2827%29.png)
 
 Para simular um conjunto de dados na `table` podemos modificar o `CategoryService` para gerar dados `fake`. Abaixo um exemplo de como ficaria uma sobrescrita do método `paginate` para gerar dados para mostrar dados falsos e popular a lista de registros. Num ambiente real é feita a adaptação do sistema de `fetch records` para lidar com as repostas da API que é consumida. 
 
@@ -214,7 +216,25 @@ Para saber mais sobre como configurar a parte de comunicação acesse a página 
 
 ### Trabalhando com o `form`
 
-O mesmo `schema` que vimos que pode configurar a `table` também será responsável pelas definições dos `forms`.
+O mesmo `schema` que vimos que pode configurar a `table` também será responsável pelas definições dos `forms`. Podemos visualizar o form que cria um registro em  [`http://localhost:8080/#/dashboard/general/category/add`](http://localhost:8080/#/dashboard/general/category/add).
+
+![](../.gitbook/assets/image%20%2821%29.png)
+
+O campo Nome está sendo exibido porque toda vez que a gente usa o `addField`, diferentemente da `table` o `form` por padrão vai exibir o campo.
+
+{% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
+```javascript
+/**
+ * Configure schema
+ */
+construct () {
+  this.addField('name')
+    .fieldTableShow()
+    .fieldTableWhere()
+    .fieldFormHidden()
+}
+```
+{% endcode %}
 
 {% page-ref page="proximos-passos.md" %}
 
