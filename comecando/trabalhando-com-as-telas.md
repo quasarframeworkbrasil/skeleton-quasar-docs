@@ -259,11 +259,11 @@ construct () {
 
 As mudanças acima farão com que o form fique dessa forma.
 
-![](../.gitbook/assets/image%20%2837%29.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
 Dentre os detalhes temos que o parâmetro `width` do método `fieldFormWidth` corresponde à largura do campo na tela e pode receber valores entre 1 e 100 que correspondem a porcentagem da linha que será ocupada pelo campo. O padrão para essa propriedade é 100 e é por isso que na primeira vez que o form foi aberto o campo estava ocupando a linha toda e na imagem acima ocupa apenas metade dela. O método `validationRequired`, por sua vez, torna o campo obrigatório. Se clicarmos no botão _SALVAR_, o resultado será a imagem a seguir.
 
-![](../.gitbook/assets/image%20%2840%29.png)
+![](../.gitbook/assets/image%20%2841%29.png)
 
 A lib de validação base que é usada é o Vuelidate, logo todas as definições de validação disponíveis na lib estão disponíveis no schema.
 
