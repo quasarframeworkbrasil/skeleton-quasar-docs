@@ -220,7 +220,7 @@ O mesmo `schema` que vimos que pode configurar a `table` também será responsá
 
 ![](../.gitbook/assets/image%20%2821%29.png)
 
-O campo Nome está sendo exibido porque toda vez que a gente usa o `addField`, diferentemente da `table` o `form` por padrão vai exibir o campo. Para ocultar o campo precisamos usar o método `fieldFormHidden`.
+O campo Nome está sendo exibido porque toda vez que a gente usa o `addField`, diferentemente da `table` o `form` por padrão vai exibir o campo. Para ocultar o campo precisamos usar o método `fieldFormHidden`. O campo de texto é exibido porque por esse é o componente padrão para um campo que é adicionado. O método `fieldIsInput` é um método que é chamado implicitamente quando nenhum componente é definido.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
@@ -238,7 +238,7 @@ O campo Nome está sendo exibido porque toda vez que a gente usa o `addField`, d
 ```
 {% endcode %}
 
-
+É possível passar um argumento `boolean` para o método `fieldFormHidden` para determinar se ele será `hidden` ou não, o padrão é verdadeiro. Seguindo com as possibilidades podemos definir que o campo deve receber o foco no carregamento, sua largura ou se ele é obrigatório ou não.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
@@ -256,6 +256,40 @@ construct () {
 }
 ```
 {% endcode %}
+
+As mudanças acima farão com que o form fique dessa forma.
+
+![](../.gitbook/assets/image%20%2837%29.png)
+
+Dentre os detalhes temos que o parâmetro `width` do método `fieldFormWidth` corresponde à largura do campo na tela e pode receber valores entre 1 e 100 que correspondem a porcentagem da linha que será ocupada pelo campo. O padrão para essa propriedade é 100 e é por isso que na primeira vez que o form foi aberto o campo estava ocupando a linha toda e na imagem acima ocupa apenas metade dela. O método `validationRequired`, por sua vez, torna o campo obrigatório. Se clicarmos no botão _SALVAR_, o resultado será a imagem a seguir.
+
+![](../.gitbook/assets/image%20%2840%29.png)
+
+A lib de validação base que é usada é o Vuelidate, logo todas as definições de validação disponíveis na lib estão disponíveis no schema.
+
+{% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
+```javascript
+// ...
+  /**
+   * Configure schema
+   */
+  construct () {
+    this.addField('name')
+      .fieldTableShow()
+      .fieldTableWhere()
+      .fieldFormAutofocus()
+      .validationRequired()
+      .validationMinLength()
+  }
+// ...
+```
+{% endcode %}
+
+Com o trecho acima conseguimos algo como o que pode ser visto abaixo.
+
+![](../.gitbook/assets/image%20%2831%29.png)
+
+Seguindo essa mesma dinâmica podemos adicionar mais campos e configurar eles usando os métodos disponíveis na classe `Schema` ou simplesmente criando nossos próprios métodos.
 
 {% page-ref page="proximos-passos.md" %}
 

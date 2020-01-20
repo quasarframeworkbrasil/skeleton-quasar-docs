@@ -12,11 +12,11 @@ Na pasta `app/` existem uma série de documentos que estão pré-configurados e 
 
 Caso o `service` em questão não vá atender um `CRUD` é possível estender apenas de `Http` e ter acesso apenas aos métodos referentes aos verbos `HTTP`.
 
-![Exemplo de service que usa apenas a classe Http](../.gitbook/assets/image%20%2833%29.png)
+![Exemplo de service que usa apenas a classe Http](../.gitbook/assets/image%20%2834%29.png)
 
 Um service criado para resolver as operações básicas vai estender de `Rest` e terá uma sintaxe parecida com a imagem abaixo.
 
-![Service Rest simples](../.gitbook/assets/image%20%2838%29.png)
+![Service Rest simples](../.gitbook/assets/image%20%2841%29.png)
 
 ### Http
 
