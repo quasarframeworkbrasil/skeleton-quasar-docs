@@ -24,7 +24,6 @@
 * [Customização](customizacao/README.md)
   * [Component](customizacao/customizando-components.md)
   * [View](customizacao/customizando-views.md)
-* [Projetos Existentes](projetos-existentes.md)
 * [Por Debaixo do Capô](por-debaixo-do-capo.md)
 * [Como Contribuir](como-contribuir.md)
 
