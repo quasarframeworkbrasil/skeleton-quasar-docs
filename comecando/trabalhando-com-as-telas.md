@@ -220,10 +220,29 @@ O mesmo `schema` que vimos que pode configurar a `table` também será responsá
 
 ![](../.gitbook/assets/image%20%2821%29.png)
 
-O campo Nome está sendo exibido porque toda vez que a gente usa o `addField`, diferentemente da `table` o `form` por padrão vai exibir o campo.
+O campo Nome está sendo exibido porque toda vez que a gente usa o `addField`, diferentemente da `table` o `form` por padrão vai exibir o campo. Para ocultar o campo precisamos usar o método `fieldFormHidden`.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
+// ...
+  /**
+   * Configure schema
+   */
+  construct () {
+    this.addField('name')
+      .fieldTableShow()
+      .fieldTableWhere()
+      .fieldFormHidden()
+  }
+// ...
+```
+{% endcode %}
+
+
+
+{% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
+```javascript
+
 /**
  * Configure schema
  */
@@ -231,7 +250,9 @@ construct () {
   this.addField('name')
     .fieldTableShow()
     .fieldTableWhere()
-    .fieldFormHidden()
+    .fieldFormAutofocus()
+    .fieldFormWidth(50)
+    .validationRequired()
 }
 ```
 {% endcode %}
