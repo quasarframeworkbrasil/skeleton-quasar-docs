@@ -1,14 +1,14 @@
 # Table of contents
 
 * [Instalação](README.md)
-* [Tutorial Rápido](comecando/README.md)
+* [Começando com o Skeleton](comecando/README.md)
   * [Iniciando o domínio](comecando/iniciando-o-dominio.md)
   * [Configurando o domínio](comecando/configurando-o-dominio.md)
   * [Preparando o acesso à API](comecando/criando-o-service.md)
   * [Definindo o schema](comecando/definindo-o-schema.md)
   * [Criando as views](comecando/criando-as-views.md)
-  * [Adicionando as rotas](comecando/adicionando-rotas.md)
-  * [Começando com as telas](comecando/brincando-com-as-telas.md)
+  * [Adicionando as rotas](comecando/adicionando-as-rotas.md)
+  * [Trabalhando com as telas](comecando/trabalhando-com-as-telas.md)
   * [Próximos passos](comecando/proximos-passos.md)
 * [Conceitos](conceitos.md)
 * [Estrutura](como-utilizar/README.md)

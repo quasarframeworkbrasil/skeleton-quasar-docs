@@ -84,7 +84,7 @@ O componente acima é a `table` que será usada para exibir os registros que ser
 
 Agora que já criamos o `domain` \(e configuramos\), o `service`, o `schema` e as `views` vamos criar as rotas para poder ver os componentes sendo exibidos.
 
-{% page-ref page="adicionando-rotas.md" %}
+{% page-ref page="adicionando-as-rotas.md" %}
 
 
 

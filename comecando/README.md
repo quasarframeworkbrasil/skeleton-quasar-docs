@@ -4,7 +4,7 @@ description: >-
   um novo recurso dentro de um projeto já previamente instalado
 ---
 
-# Tutorial Rápido
+# Começando com o Skeleton
 
 ## Iniciar o modo de desenvolvimento
 

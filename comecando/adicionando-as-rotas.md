@@ -77,7 +77,7 @@ export default (router) => {
 
 Depois dessas alterações todas já será possível ver as telas que foram pré-configuradas.
 
-{% page-ref page="brincando-com-as-telas.md" %}
+{% page-ref page="trabalhando-com-as-telas.md" %}
 
 
 

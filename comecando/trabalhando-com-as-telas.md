@@ -4,7 +4,7 @@ description: >-
   renderizado, vamos ver como trabalhar com eles agora
 ---
 
-# Começando com as telas
+# Trabalhando com as telas
 
 ## Acessando as telas
 
@@ -214,7 +214,7 @@ Para saber mais sobre como configurar a parte de comunicação acesse a página 
 
 ### Trabalhando com o `form`
 
-O mesma `schema` que vimos que pode configurar a `table` também será responsável pelas definições dos `forms`.
+O mesmo `schema` que vimos que pode configurar a `table` também será responsável pelas definições dos `forms`.
 
 {% page-ref page="proximos-passos.md" %}
 
