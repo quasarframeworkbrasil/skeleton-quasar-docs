@@ -38,7 +38,7 @@ Acesse na barra de endereços do navegador a URL [`http://localhost:8080`](http:
 
 ![](../.gitbook/assets/image%20%2836%29.png)
 
-Depois de feita a instalação e de colocarmos o projeto em modo de desenvolvimento iremos implementar um novo recurso. O recurso que será criado será um cadastro simples de Categoria. O nome desse cadastro será `Category` , que poderia ser usado num cenário real para categorizar qualquer outro cadastro. Use o link abaixo para seguir para o próximo passo.
+Depois de feita a instalação e de colocarmos o projeto em modo de desenvolvimento iremos implementar um novo recurso. O recurso que será criado será um cadastro simples de Categoria. O nome da classe deste cadastro será `Category`  \(apenas para acompanhar o resto do código que está em inglês\), que poderia ser usado num cenário real para categorizar qualquer outro cadastro. Use o link abaixo para seguir para o próximo passo.
 
 {% hint style="info" %}
 O exemplo usará a entidade `Category` como referência daqui pra frente, mas sinta-se à vontade para criar o que for mais legal para você
