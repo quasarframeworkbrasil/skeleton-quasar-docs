@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Instalação](README.md)
-* [Começando](comecando/README.md)
+* [Tutorial Rápido](comecando/README.md)
   * [Iniciando o domínio](comecando/iniciando-o-dominio.md)
   * [Configurando o domínio](comecando/configurando-o-dominio.md)
   * [Preparando o acesso à API](comecando/criando-o-service.md)
