@@ -8,7 +8,7 @@ description: >-
 
 ## Iniciar o modo de desenvolvimento
 
-Para rodar o projeto podemos usar o [CLI do Quasar](https://quasar.dev/quasar-cli/cli-documentation/commands-list#dev) ou [Docker](https://docs.docker.com/install).
+Para rodar o projeto podemos usar o [CLI do Quasar](https://quasar.dev/quasar-cli/cli-documentation/commands-list#dev) ou [Docker](https://docs.docker.com/install). Todos os são através da linha de comando com o terminal aberto na pasta raiz do projeto.
 
 ### Quasar CLI
 
@@ -23,6 +23,7 @@ quasar dev
 Se a estação de trabalho tiver [Docker](https://docs.docker.com/install) + [Docker Compose](https://docs.docker.com/compose/install) é possível utilizar docker-compose para iniciar o modo de desenvolvimento usando
 
 ```bash
+cp docker-compose.yml.develop cp docker-compose.yml
 docker-compose up
 ```
 
