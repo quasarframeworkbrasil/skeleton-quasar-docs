@@ -8,7 +8,7 @@ description: >-
 
 ## Iniciar o modo de desenvolvimento
 
-Para rodar o projeto podemos usar o [CLI do Quasar](https://quasar.dev/quasar-cli/cli-documentation/commands-list#dev) ou [Docker](https://docs.docker.com/install). Todos os são através da linha de comando com o terminal aberto na pasta raiz do projeto.
+Para rodar o projeto podemos usar o [CLI do Quasar](https://quasar.dev/quasar-cli/cli-documentation/commands-list#dev) ou [Docker](https://docs.docker.com/install). Todos dois são através da linha de comando com o terminal aberto na pasta raiz do projeto.
 
 ### Quasar CLI
 
