@@ -1,7 +1,7 @@
 ---
 description: >-
-  As aplicações front-end precisando se comunicar com serviços que entregam
-  dados e geralmente esses serviços usam HTTP
+  As aplicações front-end precisando se comunicar com serviços que proveem dados
+  e geralmente esses serviços usam HTTP
 ---
 
 # Preparando o acesso à API
