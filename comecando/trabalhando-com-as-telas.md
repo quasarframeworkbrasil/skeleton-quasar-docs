@@ -16,7 +16,7 @@ Como podemos ver, a tela ficou vazia e foi gerado um erro no console.
 
 ![](../.gitbook/assets/image%20%2830%29.png)
 
-A tela está vazia porque o nosso campo ainda está visível na `table` \(além de não ter `label` definido\) e não temos uma `API` para ser consumida. Vamos ver sobre como melhorar isso nos tópicos a seguir.
+A tela está vazia porque o nosso campo ainda está visível na `table` \(além de não ter `label` definido\) e não temos uma `API` para ser consumida. Vamos ver sobre como melhorar isto nos tópicos a seguir.
 
 É possível perceber que vários recursos já são criados por padrão, botões, campo de pesquisa e uma pesquisa avançada lateral vem por padrão quando criamos uma `table` usando o componente que vem incorporado ao projeto. Mais abaixo veremos detalhes sobre eles. Caso ainda tenha dúvida vá até a sessão [Conceitos](../como-utilizar/).
 
@@ -26,7 +26,7 @@ Os `schema` são estruturas que possuem diversos recursos para serem configurado
 
 ### Arquivo de Internacionalização
 
-Para carregar os textos dos campos são usados arquivos isolados com as mensagens que serão escritas. Crie um arquivo com o nome `pt-br.js` na pasta do domínio \(`src/domains/General/Category/pt-br.js`\) com as mensagens básicas necessárias. Note que estamos utilizando uma propriedade chamada `SCOPES` para definir algumas propriedades, veja mais sobre isso [aqui](../como-utilizar/scopes-e-positions.md).
+Para carregar os textos dos campos são usados arquivos isolados com as mensagens que serão escritas. Crie um arquivo com o nome `pt-br.js` na pasta do domínio \(`src/domains/General/Category/pt-br.js`\) com as mensagens básicas necessárias. Note que estamos utilizando uma propriedade chamada `SCOPES` para definir algumas propriedades, veja mais sobre isto [aqui](../como-utilizar/scopes-e-positions.md).
 
 {% code title="src/domains/General/Category/pt-br.js" %}
 ```javascript
@@ -261,7 +261,7 @@ As mudanças acima farão com que o form fique dessa forma.
 
 ![](../.gitbook/assets/image%20%2838%29.png)
 
-Dentre os detalhes temos que o parâmetro `width` do método `fieldFormWidth` corresponde à largura do campo na tela e pode receber valores entre 1 e 100 que correspondem a porcentagem da linha que será ocupada pelo campo. O padrão para essa propriedade é 100 e é por isso que na primeira vez que o form foi aberto o campo estava ocupando a linha toda e na imagem acima ocupa apenas metade dela. O método `validationRequired`, por sua vez, torna o campo obrigatório. Se clicarmos no botão _SALVAR_, o resultado será a imagem a seguir.
+Dentre os detalhes temos que o parâmetro `width` do método `fieldFormWidth` corresponde à largura do campo na tela e pode receber valores entre 1 e 100 que correspondem a porcentagem da linha que será ocupada pelo campo. O padrão para essa propriedade é 100 e é por isto que na primeira vez que o form foi aberto o campo estava ocupando a linha toda e na imagem acima ocupa apenas metade dela. O método `validationRequired`, por sua vez, torna o campo obrigatório. Se clicarmos no botão _SALVAR_, o resultado será a imagem a seguir.
 
 ![](../.gitbook/assets/image%20%2841%29.png)
 
