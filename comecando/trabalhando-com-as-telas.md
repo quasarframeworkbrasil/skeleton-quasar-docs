@@ -26,7 +26,7 @@ Os `schemes` são estruturas que possuem diversos recursos para serem configurad
 
 ### Arquivo de Internacionalização
 
-Para carregar os textos dos campos são usados arquivos isolados com as mensagens que serão escritas. Crie um arquivo com o nome `pt-br.js` na pasta do domínio \(`src/domains/General/Category/pt-br.js`\) com as mensagens básicas necessárias. Note que estamos utilizando uma propriedade chamada `SCOPES` para definir algumas propriedades, veja mais sobre isto [aqui](../como-utilizar/scopes-e-positions.md).
+Para carregar os textos dos campos, são usados arquivos isolados com as mensagens que serão escritas. Crie um arquivo com o nome `pt-br.js` na pasta do domínio \(`src/domains/General/Category/pt-br.js`\) com as mensagens básicas necessárias. Note que estamos utilizando uma propriedade chamada `SCOPES` para definir algumas propriedades, veja mais sobre isto [aqui](../como-utilizar/scopes-e-positions.md).
 
 {% code title="src/domains/General/Category/pt-br.js" %}
 ```javascript
