@@ -212,7 +212,7 @@ Então agora podemos ver os dados sendo exibidos na tela.
 
 ![](../.gitbook/assets/image%20%2816%29.png)
 
-Para saber mais sobre como configurar a parte de comunicação acesse a página [Project Settings](../como-utilizar/project-settings.md).
+Acesse a página [Project Settings](../como-utilizar/project-settings.md) para saber mais sobre como configurar a parte de comunicação
 
 ### Trabalhando com o `form`
 
@@ -220,7 +220,7 @@ O mesmo `schema` que vimos que pode configurar a `table` também será responsá
 
 ![](../.gitbook/assets/image%20%2821%29.png)
 
-O campo Nome está sendo exibido porque toda vez que a gente usa o `addField`, diferentemente da `table` o `form` por padrão vai exibir o campo. Para ocultar o campo precisamos usar o método `fieldFormHidden`. O campo de texto é exibido porque por esse é o componente padrão para um campo que é adicionado. O método `fieldIsInput` é um método que é chamado implicitamente quando nenhum componente é definido.
+O campo Nome está sendo exibido porque toda vez que usamos o `addField`, diferentemente da `table` o `form` por padrão vai exibir o campo. Para ocultar o campo precisamos usar o método `fieldFormHidden`. O campo de texto é exibido devido à este ser o componente padrão para um campo que é adicionado. O método `fieldIsInput` é um método que é chamado implicitamente quando nenhum componente é definido.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
@@ -289,7 +289,7 @@ Com o trecho acima conseguimos algo como o que pode ser visto abaixo.
 
 ![](../.gitbook/assets/image%20%2831%29.png)
 
-Seguindo essa mesma dinâmica podemos adicionar mais campos e configurar eles usando os métodos disponíveis na classe `Schema` ou simplesmente criando nossos próprios métodos.
+Seguindo essa mesma dinâmica podemos adicionar mais campos e configurá-los usando os métodos disponíveis na classe `Schema` ou simplesmente criando nossos próprios métodos.
 
 {% page-ref page="proximos-passos.md" %}
 
