@@ -75,7 +75,7 @@ export default (router) => {
 
 ```
 
-Depois de tudo que fizemos até aqui é possível ver as telas que foram pré-configuradas. O próximo passo do tutorial é vermos este resultado e compreender os conceitos de como trabalhar com ele.
+Depois dessas alterações todas já será possível ver as telas que foram pré-configuradas.
 
 {% page-ref page="trabalhando-com-as-telas.md" %}
 

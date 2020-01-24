@@ -8,11 +8,11 @@ description: >-
 
 ## Acessando as telas
 
-Se acessarmos [`http://localhost:8080/#/dashboard/general/category`](http://localhost:8080/#/dashboard/general/category) será possível ver a tela que exibe a `table` da entidade `Category` que criamos \(imaginando que não foi feita nenhuma alteração nas configurações padrão do projeto\). A seguir uma imagem do resultado que pode ser visto após abrir o link acima.
+Se acessarmos [`http://localhost:8080/#/dashboard/general/category`](http://localhost:8080/#/dashboard/general/category) será possível ver a tela que exibe a `table` da entidade `Category` que criamos \(imaginando que não foi feita nenhuma alteração no que vem por padrão de configuração no projeto\). A seguir uma imagem do resultado que pode ser visto após abrir o link acima.
 
 ![](../.gitbook/assets/image%20%2828%29.png)
 
-Como podemos ver a tela ficou vazia e também foi gerado um erro no console.
+Como podemos ver, a tela ficou vazia e foi gerado um erro no console.
 
 ![](../.gitbook/assets/image%20%2830%29.png)
 
