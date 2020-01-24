@@ -125,7 +125,7 @@ Com a internacionalização definida e o campo configurado para ser visível pod
 
 ![](../.gitbook/assets/image%20%283%29.png)
 
-A table possui um campo de pesquisa, para colocar o campo para aparecer lá podemos usar o método `fieldTableWhere`.
+A table possui uma área para pesquisa avançada, para colocar o campo para aparecer nesta área podemos usar o método `fieldTableWhere`.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
