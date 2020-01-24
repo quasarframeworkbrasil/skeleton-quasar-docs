@@ -22,7 +22,7 @@ A tela está vazia porque o nosso campo ainda está visível na `table` \(além 
 
 ## Configurando o `schema`
 
-Os `schema` são estruturas que possuem diversos recursos para serem configurados, vamos configurar alguns a seguir. Para ver todas as configurações do `schema` vá até a página do [Schema](../como-utilizar/schema.md).
+Os `schemes` são estruturas que possuem diversos recursos para serem configurados, vamos configurar alguns a seguir. Para ver todas as configurações do `schema` vá até a página do [Schema](../como-utilizar/schema.md).
 
 ### Arquivo de Internacionalização
 
