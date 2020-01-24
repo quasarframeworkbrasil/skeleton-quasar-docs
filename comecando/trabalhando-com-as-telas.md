@@ -16,7 +16,7 @@ Como podemos ver, a tela ficou vazia e foi gerado um erro no console.
 
 ![](../.gitbook/assets/image%20%2830%29.png)
 
-A tela está vazia porque o nosso campo ainda está visível na `table` \(além de não ter `label` definido\) e não temos uma `API` para ser consumida. Vamos ver sobre como melhorar isto nos tópicos a seguir.
+A tela está vazia porque o nosso campo ainda está visível na `table` \(além de não ter `label` definido\) e não temos uma `API` para ser consumida. Veremos como melhorar isto nos tópicos a seguir.
 
 É possível perceber que vários recursos já são criados por padrão, botões, campo de pesquisa e uma pesquisa avançada lateral vem por padrão quando criamos uma `table` usando o componente que vem incorporado ao projeto. Mais abaixo veremos detalhes sobre eles. Caso ainda tenha dúvida vá até a sessão [Conceitos](../como-utilizar/).
 
