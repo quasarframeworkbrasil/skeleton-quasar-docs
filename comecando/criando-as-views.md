@@ -8,7 +8,7 @@ description: >-
 
 Os componentes de apresentação padrão são relativamente simples e não precisam de uma implementação muita extensa.
 
-A sugestão da estrutura é colocar as views da entidade `Category` do domínio `General` dentro módulo `Dashboard` dentro de uma pasta com o caminho`src/views/dashboard/general/category`. Depois de criar esse diretório podemos criar as duas views que são necessárias para manter as operações de criar, visualizar, editar, apagar e pesquisar os registros desta entidade: `CategoryForm.vue` e `CategoryTable.vue`. A seguir exemplos de implementação dos dois.
+A sugestão da estrutura é colocar as views da entidade `Category` do domínio `General` dentro módulo `Dashboard` dentro de uma pasta com o caminho`src/views/dashboard/general/category`. Depois de criar esse diretório podemos criar as duas views que são necessárias para manter as operações de criar, visualizar, editar, apagar e pesquisar os registros desta entidade: `CategoryForm.vue` e `CategoryTable.vue`. A seguir poderemos ver exemplos de implementação dos dois.
 
 {% code title="src/views/dashboard/general/category/CategoryForm.vue" %}
 ```markup
