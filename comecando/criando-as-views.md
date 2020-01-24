@@ -21,15 +21,19 @@ import View from 'src/app/Agnostic/Adapters/View'
 import Schema from 'src/domains/General/Category/Schema/CategorySchema'
 
 /**
+ * @typedef {CategoryForm}
  */
 export default {
   /**
+   * extend adapter to load schema components with schemas
    */
   extends: View,
   /**
+   * @type {string}
    */
   name: 'CategoryForm',
   /**
+   * schema that has the entity's definitions and business rules
    */
   schema: Schema
 }
@@ -57,15 +61,19 @@ import View from 'src/app/Agnostic/Adapters/View'
 import Schema from 'src/domains/General/Category/Schema/CategorySchema'
 
 /**
+ * @typedef {CategoryTable}
  */
 export default {
   /**
+   * extend adapter to load schema components with schemas
    */
   extends: View,
   /**
+   * @type {string}
    */
   name: 'CategoryTable',
   /**
+   * schema that has the entity's definitions and business rules
    */
   schema: Schema
 }
