@@ -18,13 +18,13 @@ Um service criado para resolver as operações básicas vai estender de `Rest` e
 
 ![Service Rest simples](../.gitbook/assets/image%20%2844%29.png)
 
-### Http
+### `Http`
 
 A classe Http serve de base para a Rest e é uma abstração de um HTTP client. Por padrão ela irá utilizar o `axios` que é criado em `src/settings/http.js` , que usa como `baseURL` o valor da entrada do `.env` `VUE_APP_REST_BASE_URL`. 
 
-### Rest
+### `Rest`
 
-Para suprir os 4 pilares da gestão das entidades ela já conta com os métodos create, read, update e destroy, tendo ainda o método search / paginate para lidar com a pesquisa e paginação de dados.
+Para suprir os 4 pilares da gestão das entidades ela já conta com os métodos `create`, `read`, `update` e `destroy`, tendo ainda o método `search` / `paginate` para lidar com a pesquisa e paginação de dados.
 
 {% hint style="info" %}
 Para se adaptar à diferentes APIs existe em `src/settings/rest.js` duas funções que podem ser adaptadas para extrair os dados da resposta da requisição e passarem para o formato que o projeto espera
