@@ -19,7 +19,7 @@ Pelos nossos estudos e experiências a metodologia usada na construção do Skel
 A resposta franca é SIM. Em contrapartida existem alguns benefícios como:
 
 * Simplificação da cadeia de produtiva \(não é preciso reescrever toda a lógica de gestão de estados, validação, e etc\);
-* Centralização das mudanças, caso o Quasar sofra alguma modificação o seu código não será impactado, apenas os adaptadores que aplicam suas configurações aos componentes dele;
+* Centralização das mudanças, caso o Quasar \(framework que pode ser substituído com algum esforço reduzido\) sofra alguma modificação o seu código não será impactado, apenas os adaptadores que aplicam suas configurações aos componentes dele;
 * Possibilidade de criar estruturas base que se repetem com frequência;
 * Controle do projeto em cima de uma linguagem de programação e não em cima de templates ou dependência vital de um framework de UI.
 
@@ -34,4 +34,8 @@ Estamos usando o nosso grupo no [Telegram](https://t.me/quasarframeworkbrasil) e
 `--`
 
 > Bora começar a codar?!
+
+{% page-ref page="comecando/" %}
+
+
 
