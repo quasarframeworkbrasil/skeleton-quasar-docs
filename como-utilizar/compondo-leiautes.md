@@ -40,5 +40,56 @@ Integra todas as rotas de dominios que são usados para criar telas para o módu
 
 Possui componentes para renderizar o menu superior direito e o menu lateral  esquerdo \(drawer\).
 
+## Criando um novo módulo
 
+Não há um padrão exato para a criação de um módulo. Provavelmente ele terá pelo menos um componente para renderizar a tela e um conjunto de rotas para tornar possível seu carregamento. Uma entrada no gerenciador de estados também pode ser necessária.
+
+### Rotas
+
+Para registrar as rotas do seu módulo basta criar um `routeFile` que exporta uma função que receba o `router` como argumento, importar a mesma no `src/router/index.js` e adicionar uma linha para executar esta função lá. Dentro do `routeFile` é possível adicionar `routes` e `middlewares`.
+
+{% code title="src/router/index.js" %}
+```javascript
+// ...
+import myModuleRouteFile from 'src/modules/MyModule/router/routeFile'
+// ...
+
+  // create router
+  $router = new AppRouter(options)
+
+  // ...
+
+  // inject router on auth module
+  authRouteFile($router)
+  // inject router on dashboard module
+  dashboardRouteFile($router)
+  // inject router on MyModule module
+  myModuleRouteFile($router)
+```
+{% endcode %}
+
+### Gerenciamento de Estado
+
+Para registrar a uma `store` que tenha sido criada pelo módulo basta ir até a `store` principal em `src/store/index.js`, importar e registrar como um módulo.
+
+{% code title="src/store/index.js" %}
+```javascript
+// ...
+import myModule from 'src/modules/MyModule/store'
+// ...
+
+  // create store
+  $store = new Vuex.Store({
+    modules: {
+      app,
+      auth, // register auth router
+      dashboard, // register dashboard router
+      myModule // register the new module MyModule
+    },
+    // enable strict mode (adds overhead!)
+    // for dev mode only
+    strict: process.env.DEV
+  })
+```
+{% endcode %}
 
