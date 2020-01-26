@@ -40,3 +40,5 @@ Possui recursos para adaptar a comunicação da classe `Rest` com as respostas q
 
 Agrupa as principais propriedades que podemos alterar na construção do `schema` e conversão de um `field` em um componente [`Vue`](https://vuejs.org).
 
+
+

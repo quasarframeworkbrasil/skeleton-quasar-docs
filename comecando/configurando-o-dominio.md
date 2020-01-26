@@ -30,7 +30,7 @@ export const resource = '/general/category'
 
 Em [`path`](../como-utilizar/settings.md#path) vamos informar a URL base das telas do domínio que estamos configurando, para ver mais sobre isso confira a página [Settings](../como-utilizar/settings.md#path).
 
-A propriedade [`domain`](../como-utilizar/settings.md#domain) caso está com o valor `general.category` por o caminho `src/domains/General/Category`.
+A propriedade [`domain`](../como-utilizar/settings.md#domain), por sua vez,  está com o valor `general.category` porque o caminho para o domínio é `src/domains/General/Category` e o mesmo será usado para recuperar alguns recursos necessários nas construções das telas.
 
 Por fim em [`resource`](../como-utilizar/settings.md#resource), foi utilizado o valor `/general/category` que será usado para compor as requisições que serão feitas às APIs utilizadas.
 

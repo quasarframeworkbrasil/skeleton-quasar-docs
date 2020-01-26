@@ -31,7 +31,7 @@ docker-compose up
 
 Aguarde até ver no terminal uma saída como a da imagem abaixo. Neste ponto seu projeto estará pronto para iniciar os trabalhos.
 
-![](../.gitbook/assets/image%20%2836%29.png)
+![](../.gitbook/assets/image%20%2837%29.png)
 
 ## Começando os trabalhos
 

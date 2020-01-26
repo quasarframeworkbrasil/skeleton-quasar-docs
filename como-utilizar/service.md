@@ -16,7 +16,7 @@ Caso o `service` em questão não vá atender um `CRUD` é possível estender ap
 
 Um service criado para resolver as operações básicas vai estender de `Rest` e terá uma sintaxe parecida com a imagem abaixo.
 
-![Service Rest simples](../.gitbook/assets/image%20%2842%29.png)
+![Service Rest simples](../.gitbook/assets/image%20%2844%29.png)
 
 ### Http
 
