@@ -12,12 +12,25 @@ Resumidamente com os `schemes` serão criados todos os `forms` e `tables` que se
 
 Para gerenciar os campos temos dois métodos:
 
-* `addField`: ;
-* `getField`: ;
+* `addField`: adiciona um novo campo ao `schema`;
+* `getField`: seleciona um campo que já faz parte do `schema` para ser manipulado;
+
+Para manipular as propriedades relacionadas à table:
+
+* `fieldTableWidth`: define a largura do campo na tabela;
+* `fieldTableShow`: define se o campo será visível ou não na tabela;
+* `fieldTableWhere`: determina se o campo será exibido na pesquisa lateral da tabela;
+* `fieldTableFilter`: define se o campo será usado como um filtro fixo na parte superior da tabela;
+* `fieldTableRequired`: especifica se é possível ocultar o campo;
+* `fieldTableName`: permite alterar o nome da propriedade que está sendo acessada na lista;
+* `fieldTableAlign`: configura o alinhamento na tabela;
+* `fieldTableSortable`: determina se é possível aplicar ordenação através desse campo;
+* `fieldTableFormat`: função que será usada para formatar os valores da coluna antes de exibir na linha;
+* `fieldTableOrder`: permite configurar a ordenação do campo entre os campos da tabela;
 
 Para determinar os componentes que serão usados pelos campos temos:
 
-* `fieldIsInput`: ;
+* `fieldIsInput`: determina que o campo usará um componente de texto padrão;
 * `fieldIsNumber`: ;
 * `fieldIsPassword`: ;
 * `fieldIsEmail`: ;
@@ -35,7 +48,7 @@ Para determinar os componentes que serão usados pelos campos temos:
 * `fieldIsCurrency`: ;
 * `fieldIsButton`: ;
 
-Para manipular os campos com macros tempos as seguintes macros:
+Há ainda algumas macros disponíveis para configurar alguns campos:
 
 * `fieldAsPrimaryKey`: ;
 * `fieldAsZip`: ;
@@ -88,19 +101,6 @@ Para tratar sobre validação temos os seguintes métodos:
 * `validationWithParams`: ;
 * `validationClear`: ;
 * `validationRemove`: ;
-
-Para manipular as propriedades relacionadas à table:
-
-* `fieldTableWidth`: ;
-* `fieldTableShow`: ;
-* `fieldTableWhere`: ;
-* `fieldTableFilter`: ;
-* `fieldTableRequired`: ;
-* `fieldTableName`: ;
-* `fieldTableAlign`: ;
-* `fieldTableSortable`: ;
-* `fieldTableFormat`: ;
-* `fieldTableOrder`: ;
 
 
 
