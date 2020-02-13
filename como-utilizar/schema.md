@@ -31,9 +31,9 @@ Para manipular as propriedades relacionadas à table:
 Para determinar os componentes que serão usados pelos campos temos:
 
 * `fieldIsInput`: determina que o campo usará um componente de texto padrão;
-* `fieldIsNumber`: ;
-* `fieldIsPassword`: ;
-* `fieldIsEmail`: ;
+* `fieldIsNumber`: determina que o campo usará um componente de input do tipo numérico;
+* `fieldIsPassword`: determina que o campo usará um componente de input do tipo password com hashs nos caracteres;
+* `fieldIsEmail`: determina que o campo usará um componente de input do tipo e-mail;
 * `fieldIsText`: ;
 * `fieldIsCheckbox`: ;
 * `fieldIsRadio`: ;
