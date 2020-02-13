@@ -33,10 +33,10 @@ Para determinar os componentes que serão usados pelos campos temos:
 * `fieldIsInput`: determina que o campo usará um componente de texto padrão;
 * `fieldIsNumber`: determina que o campo usará um componente de input do tipo numérico;
 * `fieldIsPassword`: determina que o campo usará um componente de input do tipo password com hashs nos caracteres;
-* `fieldIsEmail`: determina que o campo usará um componente de input do tipo e-mail;
-* `fieldIsText`: ;
-* `fieldIsCheckbox`: ;
-* `fieldIsRadio`: ;
+* `fieldIsEmail`: determina que o campo usará um componente de input do tipo e-mail, de acordo com as validações criadas para o mesmo;
+* `fieldIsText`: determina que o campo usará um componente de textarea parecido com um bloco de notas;
+* `fieldIsCheckbox`: determina que o campo usará um componente de checkbox;
+* `fieldIsRadio`: determina que o campo usará um componente de radio button, passando os valores através de parâmetro;
 * `fieldIsSelect`: ;
 * `fieldIsSelectRemote`: ;
 * `fieldIsSelectRemoteMultiple`: ;
