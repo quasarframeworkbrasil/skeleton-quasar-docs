@@ -41,10 +41,10 @@ Para determinar os componentes que serão usados pelos campos temos:
 * `fieldIsSelectRemote`: ;
 * `fieldIsSelectRemoteMultiple`: ;
 * `fieldIsToggle`: ;
-* `fieldIsDate`: ;
-* `fieldIsDatetime`: ;
+* `fieldIsDate`: determina que o campo usará um componente de Data, as configurações devem ser passadas via atributo;
+* `fieldIsDatetime`: determina que o campo usará um componente de Data e Hora, as configurações devem ser passadas via atributo;
 * `fieldIsInputPlan`: ;
-* `fieldIsArray`: ;
+* `fieldIsArray`: determina que o campo usará um componente de CRUD customizado, sua funcionalidade é a mesma que de um crud;
 * `fieldIsCurrency`: ;
 * `fieldIsButton`: ;
 
