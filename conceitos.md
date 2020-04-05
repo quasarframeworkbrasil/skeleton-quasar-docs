@@ -8,7 +8,7 @@ description: >-
 
 A ideia do Skeleton é entregar uma experiência RAD \(Rapid Application Development\) centralizando operações rotineiras e deixando para o desenvolvedor apenas as regras de negócio. Atuando apenas na lógica do negócio, o desenvolvedor trabalha na configuração dos estados e comportamentos que serão exibidos na tela. Em seguida ele cria um `Controller Component` que irá passar essas configuração para o `Container Component`. Este por sua vez irá se comunicar com os `Specialist Components` para renderizar as telas.
 
-![](.gitbook/assets/image-25.png)
+![](https://github.com/quasarframeworkbrasil/skeleton-quasar-docs/tree/837016d4104c9c9d353b7091e5fbb7e128181839/.gitbook/assets/image-25.png)
 
 ## Quando é interessante usar essa metodologia?
 
