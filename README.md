@@ -8,13 +8,13 @@ description: >-
 
 Se você está com o SSH configurado no Github pode fazer um clone usando o comando abaixo onde `my-project` é o nome da pasta que será criada com o projeto.
 
-```
+```text
 $ git clone git@github.com:quasarframeworkbrasil/skeleton.git my-project
 ```
 
 Caso não tenha certeza sobre isso ou não tenha use a opção via HTTPS onde `my-project` é o nome da pasta que será criada com o projeto.
 
-```
+```text
 $ git clone https://github.com/quasarframeworkbrasil/skeleton.git my-project
 ```
 

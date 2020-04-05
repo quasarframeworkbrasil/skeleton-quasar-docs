@@ -6,7 +6,7 @@ description: >-
 
 # Preparando o acesso à API
 
-Seguindo com nosso exemplo, vamos criar dentro de `src/domains/General/Category` uma pasta chamada `Schema`. Dentro desta pasta crie um arquivo chamado `CategoryService.js`, tendo no final um caminho `src/domains/General/Category/Schema/CategoryService.js`. 
+Seguindo com nosso exemplo, vamos criar dentro de `src/domains/General/Category` uma pasta chamada `Schema`. Dentro desta pasta crie um arquivo chamado `CategoryService.js`, tendo no final um caminho `src/domains/General/Category/Schema/CategoryService.js`.
 
 {% hint style="info" %}
 Estes caminhos podem variar de acordo com as necessidades de cada um e estão aqui apenas como sugestão. Com um pouco de experiência é possível compreender o que está sendo feito e usar da forma que julgar conveniente
@@ -28,7 +28,6 @@ export default class CategoryService extends Rest {
    */
   resource = resource
 }
-
 ```
 {% endcode %}
 
@@ -41,6 +40,4 @@ Não há uma classe para consumir recursos usando [`GraphQL`](https://graphql.or
 Esta classe será usada a seguir para prover acesso aos endpoints da entidade, vamos seguir para o próximo passo.
 
 {% page-ref page="definindo-o-schema.md" %}
-
-
 
