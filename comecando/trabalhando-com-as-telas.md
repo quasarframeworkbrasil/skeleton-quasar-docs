@@ -10,11 +10,11 @@ description: >-
 
 Se acessarmos [`http://localhost:8080/#/dashboard/general/category`](http://localhost:8080/#/dashboard/general/category) será possível ver a tela que exibe a `table` da entidade `Category` que criamos \(imaginando que não foi feita nenhuma alteração no que vem por padrão de configuração no projeto\). A seguir uma imagem do resultado que pode ser visto após abrir o link acima.
 
-![](../.gitbook/assets/image%20%2828%29.png)
+![](../.gitbook/assets/image-28.png)
 
 Como podemos ver, a tela ficou vazia e foi gerado um erro no console.
 
-![](../.gitbook/assets/image%20%2830%29.png)
+![](../.gitbook/assets/image-30.png)
 
 A tela está vazia porque o nosso campo ainda está visível na `table` \(além de não ter `label` definido\) e não temos uma `API` para ser consumida. Veremos como melhorar isto nos tópicos a seguir.
 
@@ -66,7 +66,6 @@ export default {
     name: 'Nome'
   }
 }
-
 ```
 {% endcode %}
 
@@ -97,7 +96,6 @@ export default {
   },
   // ...
 }
-
 ```
 {% endcode %}
 
@@ -123,7 +121,7 @@ Para exibir um campo na `table` podemos chamar o método `fieldTableShow`.
 
 Com a internacionalização definida e o campo configurado para ser visível podemos ver que a tela da aplicação agora mostra o campo "Nome".
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image-3.png)
 
 A table possui uma área para pesquisa avançada, para colocar o campo para aparecer nesta área podemos usar o método `fieldTableWhere`.
 
@@ -144,9 +142,9 @@ A table possui uma área para pesquisa avançada, para colocar o campo para apar
 
 O resultado será algo como a imagem abaixo.
 
-![](../.gitbook/assets/image%20%2827%29.png)
+![](../.gitbook/assets/image-27.png)
 
-Para simular um conjunto de dados na `table` podemos modificar o `CategoryService` para gerar dados `fake`. Abaixo um exemplo de como ficaria uma sobrescrita do método `paginate` para gerar dados para mostrar dados falsos e popular a lista de registros. Num ambiente real é feita a adaptação do sistema de `fetch records` para lidar com as repostas da API que é consumida. 
+Para simular um conjunto de dados na `table` podemos modificar o `CategoryService` para gerar dados `fake`. Abaixo um exemplo de como ficaria uma sobrescrita do método `paginate` para gerar dados para mostrar dados falsos e popular a lista de registros. Num ambiente real é feita a adaptação do sistema de `fetch records` para lidar com as repostas da API que é consumida.
 
 {% code title="src/domains/General/Category/Schema/CategoryService.js" %}
 ```javascript
@@ -210,15 +208,15 @@ export default class CategoryService extends Rest {
 
 Então agora podemos ver os dados sendo exibidos na tela.
 
-![](../.gitbook/assets/image%20%2816%29.png)
+![](../.gitbook/assets/image-16.png)
 
 Acesse a página [Project Settings](../como-utilizar/project-settings.md) para saber mais sobre como configurar a parte de comunicação
 
 ### Trabalhando com o `form`
 
-O mesmo `schema` que vimos que pode configurar a `table` também será responsável pelas definições dos `forms`. Podemos visualizar o form que cria um registro em  [`http://localhost:8080/#/dashboard/general/category/add`](http://localhost:8080/#/dashboard/general/category/add).
+O mesmo `schema` que vimos que pode configurar a `table` também será responsável pelas definições dos `forms`. Podemos visualizar o form que cria um registro em [`http://localhost:8080/#/dashboard/general/category/add`](http://localhost:8080/#/dashboard/general/category/add).
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![](../.gitbook/assets/image-21.png)
 
 O campo Nome está sendo exibido porque toda vez que usamos o `addField`, diferentemente da `table` o `form` por padrão vai exibir o campo. Para ocultar o campo precisamos usar o método `fieldFormHidden`. O campo de texto é exibido devido à este ser o componente padrão para um campo que é adicionado. O método `fieldIsInput` é um método que é chamado implicitamente quando nenhum componente é definido.
 
@@ -242,7 +240,6 @@ O campo Nome está sendo exibido porque toda vez que usamos o `addField`, difere
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
-
 /**
  * Configure schema
  */
@@ -259,11 +256,11 @@ construct () {
 
 As mudanças acima farão com que o form fique dessa forma.
 
-![](../.gitbook/assets/image%20%2840%29.png)
+![](../.gitbook/assets/image-40.png)
 
 Dentre os detalhes temos que o parâmetro `width` do método `fieldFormWidth` corresponde à largura do campo na tela e pode receber valores entre 1 e 100 que correspondem a porcentagem da linha que será ocupada pelo campo. O padrão para essa propriedade é 100 e é por isto que na primeira vez que o form foi aberto o campo estava ocupando a linha toda e na imagem acima ocupa apenas metade dela. O método `validationRequired`, por sua vez, torna o campo obrigatório. Se clicarmos no botão _SALVAR_, o resultado será a imagem a seguir.
 
-![](../.gitbook/assets/image%20%2843%29.png)
+![](https://github.com/3kynox/skeleton-quasar-docs/tree/b95af65d3ee68bdf34af9b56bfe9778fe205da07/.gitbook/assets/image%20%2843%29.png)
 
 A lib de validação base que é usada é o Vuelidate, logo todas as definições de validação disponíveis na lib estão disponíveis no schema.
 
@@ -287,11 +284,9 @@ A lib de validação base que é usada é o Vuelidate, logo todas as definiçõe
 
 Com o trecho acima conseguimos algo como o que pode ser visto abaixo.
 
-![](../.gitbook/assets/image%20%2831%29.png)
+![](../.gitbook/assets/image-31.png)
 
 Seguindo essa mesma dinâmica podemos adicionar mais campos e configurá-los usando os métodos disponíveis na classe `Schema` ou simplesmente criando nossos próprios métodos.
 
 {% page-ref page="proximos-passos.md" %}
-
-
 
