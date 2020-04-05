@@ -1,2 +1,2 @@
-# Scopes e Positions
+# Scopes and Positions
 

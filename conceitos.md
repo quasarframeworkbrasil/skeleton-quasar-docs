@@ -1,39 +1,39 @@
 ---
 description: >-
-  Tudo o que você precisa saber e mais um pouco sobre como trabalhar com o
-  projeto Skeleton da comunidade Quasar Framework Brasil
+  Everything you need to know and a little more about working with the Skeleton
+  project of the Quasar Framework Brazil community
 ---
 
-# Conceitos
+# Concepts
 
-A ideia do Skeleton é entregar uma experiência RAD \(Rapid Application Development\) centralizando operações rotineiras e deixando para o desenvolvedor apenas as regras de negócio. Atuando apenas na lógica do negócio, o desenvolvedor trabalha na configuração dos estados e comportamentos que serão exibidos na tela. Em seguida ele cria um `Controller Component` que irá passar essas configuração para o `Container Component`. Este por sua vez irá se comunicar com os `Specialist Components` para renderizar as telas.
+The Skeleton idea is to deliver a RAD \(Rapid Application Development\) experience by centralizing routine operations and leaving the business rules to the developer. Acting only on business logic, the developer works on configuring the states and behaviors that will be displayed on the screen. Then it creates a`Controller Component` that will pass these settings on to the`Container Component`. This in turn will communicate with the`Specialist Components` to render the screens.
 
 ![](.gitbook/assets/image-25.png)
 
-## Quando é interessante usar essa metodologia?
+## When is it interesting to use this methodology?
 
-Pelos nossos estudos e experiências a metodologia usada na construção do Skeleton tende à ser mais eficiente em aplicações que sejam painéis de controle com muitas e muitas telas com a mesma estrutura. O custo de criar um `Container Component` é relativamente alto e se a aplicação tiver telas muito diferentes em cada ambiente não vale à pena o investimento. Em contrapartida se a aplicação tiver dezenas de forms e tables no padrão que já é suportado a produtividade será absurdamente alta.
+For our studies and experiences the methodology used in the construction of the Skeleton tends to be more efficient in applications that are control panels with many, many screens with the same structure. The cost of creating a`Container Component` is relatively high and if the application has very different screens in each environment, it is not worth the investment. On the other hand, if the application has dozens of forms and tables in the standard that is already supported, productivity will be absurdly high.
 
-## Meu projeto vai ficar mais complexo?
+## Will my project get more complex?
 
-A resposta franca é SIM. Em contrapartida existem alguns benefícios como:
+The straight answer is YES. On the other hand, there are some benefits such as:
 
-* Simplificação da cadeia de produtiva \(não é preciso reescrever toda a lógica de gestão de estados, validação, e etc\);
-* Centralização das mudanças, caso o Quasar \(framework que pode ser substituído com algum esforço reduzido\) sofra alguma modificação o seu código não será impactado, apenas os adaptadores que aplicam suas configurações aos componentes dele;
-* Possibilidade de criar estruturas base que se repetem com frequência;
-* Controle do projeto em cima de uma linguagem de programação e não em cima de templates ou dependência vital de um framework de UI.
+* Simplification of the production chain \(it is not necessary to rewrite the entire logic of state management, validation, etc.\);
+* Centralization of changes, if the Quasar \(framework that can be replaced with some reduced effort\) undergoes some modification, your code will not be impacted, only the adapters that apply your settings to its components;
+* Possibility to create base structures that are repeated frequently;
+* Project control over a programming language and not over templates or vital dependency on a UI framework.
 
-## Utilizar esta metodologia engessa meu projeto?
+## Does using this methodology hamper my project?
 
-Absolutamente NÃO. É possível ver em [Customizando Components](customizacao/customizando-components.md) que podemos criar componentes customizados, em [Customizando Views](customizacao/customizando-views.md) podemos ver como criar views totalmente customizados sem sequer fazer uso da estrutura dos domínios.
+Absolutely not. It is possible to see in [Customizando Components](customizacao/customizando-components.md) that we can create customized components, in [Customizando Views](customizacao/customizando-views.md) we can see how to create fully customized views without even making use of the domain structure.
 
-## Como posso conseguir suporte?
+## How can I get support?
 
-Estamos usando o nosso grupo no [Telegram](https://t.me/quasarframeworkbrasil) e as [issues do repositório](https://github.com/quasarframeworkbrasil/skeleton/issues) do Skeleton para tirar dúvidas e acolher críticas / sugestões.
+We are using our group on [Telegram](https://t.me/quasarframeworkbrasil) and the  [issues](https://github.com/quasarframeworkbrasil/skeleton/issues) in the Skeleton repository to answer questions and welcome criticisms / suggestions.
 
 `--`
 
-> Bora começar a codar?!
+> Let's start coding ?!
 
 {% page-ref page="comecando/" %}
 

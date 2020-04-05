@@ -1,52 +1,52 @@
 ---
-description: Cada módulo é um ponto de partida de central para uma estrutura do projeto
+description: Each module is a central starting point for a project structure
 ---
 
 # Modules
 
-Os módulos possuem os recursos base para renderizar a estrutura que será usada para montar todas as suas telas filhas. Para isso serão configurados componentes para fazer a apresentação, rotas, gerenciadores de estado e etc. A aplicação já possui dois módulos criados: Auth e Dashboard.
+The modules have the base resources to render the structure that will be used to assemble all of their child screens. For that, components will be configured to make the presentation, routes, state managers and etc. The application already has two modules created: Auth and Dashboard.
 
 ![](../.gitbook/assets/image-29.png)
 
-## Módulo Auth
+## Auth Module
 
-Este módulo está destinado à dar suporte às telas que são acessadas sem ter uma sessão definida. Estamos falando de telas como a que é usada pra informar usuário e senha para iniciar uma sessão, a que é usada para criar um usuário ou ainda para alterar a senha que foi perdida. Nesse caso iríamos adicionar tudo o que fosse base para essas telas e então iríamos prosseguir com a construção de seus `Services`, `Schema` e `Views`. Inicialmente ele possui as pastas abaixo, mas pode ser alterado livremente com a finalidade de implementar todos os recursos que o projeto demandar.
+This module is intended to support the screens that are accessed without having a defined session. We are talking about screens like the one used to enter a username and password to start a session, the one used to create a user or to change the password that was lost. In this case we would add everything that was the basis for these screens and then we would proceed with the construction of its`Services`, `Schema` and`Views`. Initially it has the folders below, but it can be changed freely in order to implement all the resources that the project requires.
 
 ### store
 
-Gerencia apenas dois estados: `token` e `user`. O estado user é explorado com `getters` para compor informações das telas de outros módulos, por exemplo.
+It only manages two states:`token` and`user`. The user state is explored with`getters`to compose information from the screens of other modules, for example.
 
 ### helper
 
-Possui funções que são usadas para validar permissão e permitir acesso à recursos como rotas e menus.
+It has functions that are used to validate permission and allow access to resources such as routes and menus.
 
 ### router
 
-Possui apenas a rota da tela de login, mas pode ser incrementado para abrigar os recursos que forem criados para administrar o acesso do usuário que não possui uma sessão.
+It has only the login screen route, but it can be increased to accommodate the resources that are created to manage the access of the user who does not have a session.
 
-## Módulo Dashboard
+## Dashboard Module
 
-Os recursos necessários para configurar o painel de controle, que é a área protegida da aplicação ficarão nesse módulo. Ele conta com as pastas:
+The resources needed to configure the control panel, which is the protected area of the application, will remain in this module. It has the following folders:
 
 ### store
 
-Gerencia `transition`, `report`, `title` que são relacionados à interface.
+Manage`transition`, `report`, `title` that are related to the interface.
 
 ### router
 
-Integra todas as rotas de dominios que são usados para criar telas para o módulo.
+It integrates all the domain routes that are used to create screens for the module.
 
 ### components
 
-Possui componentes para renderizar o menu superior direito e o menu lateral esquerdo \(drawer\).
+It has components to render the upper right menu and the left side menu \(drawer\).
 
-## Criando um novo módulo
+## Creating a new module
 
-Não há um padrão exato para a criação de um módulo. Provavelmente ele terá pelo menos um componente para renderizar a tela e um conjunto de rotas para tornar possível seu carregamento. Uma entrada no gerenciador de estados também pode ser necessária.
+There is no exact standard for creating a module. It will probably have at least one component to render the screen and a set of routes to make loading possible. An entry in the state manager may also be required.
 
-### Rotas
+### Routes
 
-Para registrar as rotas do seu módulo basta criar um `routeFile` que exporta uma função que receba o `router` como argumento, importar a mesma no `src/router/index.js` e adicionar uma linha para executar esta função lá. Dentro do `routeFile` é possível adicionar `routes` e `middlewares`.
+To register your module's routes, simply create a`routeFile`that exports a function that receives the`router`as an argument, import it into`src/router/index.js` and add a line to execute this function there. Within`routeFile`it is possible to add`routes` and `middlewares`.
 
 {% code title="src/router/index.js" %}
 ```javascript
@@ -68,9 +68,9 @@ import myModuleRouteFile from 'src/modules/MyModule/router/routeFile'
 ```
 {% endcode %}
 
-### Gerenciamento de Estado
+### State Management
 
-Para registrar a uma `store` que tenha sido criada pelo módulo basta ir até a `store` principal em `src/store/index.js`, importar e registrar como um módulo.
+To register a`store` that has been created by the module, just go to the main`store`in `src/store/index.js`, import and register as a module.
 
 {% code title="src/store/index.js" %}
 ```javascript

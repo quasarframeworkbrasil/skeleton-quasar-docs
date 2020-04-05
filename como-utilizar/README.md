@@ -1,12 +1,12 @@
 ---
-description: Descrição detalhada da estrutura básica montada
+description: Detailed description of the assembled basic structure
 ---
 
-# Estrutura
+# Structure
 
-## Visão Geral
+## Overview
 
-Vamos conhecer a estrutura e entender o que muda em relação a um projeto [Quasar](https://quasar.dev/quasar-cli/cli-documentation/directory-structure) qualquer. A estrutura de pastas que vem por padrão no projeto pode ser vista abaixo.
+Let's get to know the structure and understand what changes in relation to any [Quasar](https://quasar.dev/quasar-cli/cli-documentation/directory-structure) project. The folder structure that comes standard in the project can be seen below.
 
 ```bash
 src/
@@ -25,40 +25,40 @@ src/
 ```
 
 {% hint style="info" %}
-Os itens com ¹ não são padrão do [Quasar](https://quasar.dev/quasar-cli/cli-documentation/directory-structure)
+Items with ¹ are not standard [Quasar](https://quasar.dev/quasar-cli/cli-documentation/directory-structure)
 {% endhint %}
 
-Veremos então de forma discriminada qual a responsabilidade de cada diretório destes listados acima.
+We will then see in a discriminated manner the responsibility of each directory listed above.
 
-## Estrutura de Diretórios
+## Directory Structure
 
-As pastas `assets/`, `boot/`, `css/`, `router/`, `statics/` e `store/` são basicamente o que vem no [template padrão do Quasar](https://quasar.dev/quasar-cli/cli-documentation/directory-structure) e tem apenas alguns recursos básicos para preparar o projeto para a metodologia. Em `boot/`, por exemplo, temos todos os `boot files` necessários para inicializar a aplicação. Já em `css/` há um import para os estilos dos componentes base. Na pasta `store/` há uma base `Vuex Store` configurada para suprir necessidades primárias de um app desse tipo. A pasta `router/`, por sua vez, tem muitas modificações em relação à original, principalmente em relação à sua organização interna. As pastas `components/` ,`layouts/` e `pages/` são apagadas por não serem usadas por padrão.
+The `assets/`, `boot/`, `css/`, `router/`, `statics/` and `store/` folders are basically what comes in the [standard Quasar template](https://quasar.dev/quasar-cli/cli-documentation/directory-structure) and have only a few basic resources to prepare the project for the methodology. In`boot/`, for example, we have all the`boot files` needed to start the application. In`css/` there is an import for the styles of the base components. In the`store/` folder there is a`Vuex Store` base configured to supply the primary needs of such an app. The`router/`folder, in turn, has many modifications in relation to the original, mainly in relation to its internal organization. The`components/` ,`layouts/` and `pages/` folders are deleted because they are not used by default.
 
-A seguir veremos cada diretório que é adicionado à uma instalação tradicional do Quasar. O router/ não está nessa lista, mas por entregar uma experiência muito diferente do usual podemos ver mais sobre ele em [Trabalhando com Routes](trabalhando-com-rotas.md).
+Next, we'll look at each directory that is added to a traditional Quasar installation. The router / is not on that list, but for delivering a very different experience than we can see more about it in [Working with Routes](trabalhando-com-rotas.md).
 
 ### `app/`
 
-Este diretório é o coração da estrutura que permite que haja toda a automatização que a metodologia entrega. Dentro dela é possível achar classes e arquivos que serão estendidos e utilizados para montar os fluxos de trabalho.
+This directory is the heart of the structure that allows all the automation that the methodology delivers. Within it, you can find classes and files that will be extended and used to assemble workflows.
 
 ### `domains/`
 
-Em domains vamos colocar nossas classes de Schema e Service, e todos os arquivos responsáveis por prover configurações para os componentes \(camada de apresentação em geral\). O Skeleton vem com alguns exemplos apenas para dar uma ideia da organização e do que é possível fazer, mas não há regras nesse ponto.
+In domains we will place our Schema and Service classes, and all files responsible for providing configurations for the components \(presentation layer in general\). Skeleton comes with some examples just to give you an idea of the organization and what is possible to do, but there are no rules at this point.
 
 ### `lang/`
 
-Diretório que centraliza a parte de internacionalização. Nele é possível ver arquivos de mensagens padrão do sistema e métodos para gerenciar o idioma da aplicação.
+Directory that centralizes the internationalization part. It is possible to view standard system message files and methods for managing the application language.
 
 ### `modules/`
 
-Nesta estrutura um `module` é o arcabouço básico de um tipo de visão que do aplicativo. Eles agregam arquivos de rotas e componentes para prover a base da apresentação à que se destinam. Por padrão o projeto possui dois leiautes: `Auth` e `Dashboard`. O `Auth` é para atender à todas as telas que são acessadas fora do painel de controle \(por exemplos, telas de login ou de criação de uma nova conta\). Já o `Dashboard` cobre a área administrativa que é exibida quando um usuário tem uma sessão ativa. Em [Compondo Modules](compondo-leiautes.md) é possível saber mais sobre o conteúdo deste diretório.
+In this structure, a`module`is the basic framework of a type of view that of the application. They aggregate route and component files to provide the basis for the presentation to which they are intended. By default the project has two layouts:`Auth` and`Dashboard`.`Auth`is for all screens that are accessed outside of the control panel \(for example, login or new account creation screens\). The`Dashboard`covers the administrative area that is displayed when a user has an active session. In [Componsing Modules](compondo-leiautes.md)  you can find out more about the contents of this directory.
 
 ### `settings/`
 
-No diretório settings temos arquivos que provêm configuração para quase todos os outros dessa lista. É nele que ficam declarados detalhes que vão desde como será feita a criação de um campo, como será alimentada a table após fazer um fetch até o\(s\) HTTP Client\(s\) que serão usados no projeto.
+In the settings directory we have files that provide configuration for almost everyone else on this list. It is here that details are stated, ranging from how to create a field, how the table will be fed after fetching it to the HTTP Client \(s\) that will be used in the project.
 
 ### `views/`
 
-Todas as views são direcionadas para cá. Neste ponto será possível ver os arquivos `.vue` mapeados pelas rotas e seus componentes auxiliares \(caso seja necessário fazê-los\). Por padrão as visões são geralmente direcionadas para `Controller Components` e contam com um template bem enxuto, mas é possível personalizá-los para contextos específicos, veja mais sobre isso em [Customizando Components](../customizacao/customizando-components.md) e [Customizando Views](../customizacao/customizando-views.md).
+All views are directed here. At this point, it will be possible to see the`.vue` files mapped by the routes and their auxiliary components \(if necessary\). By default the views are usually directed towards`Controller`Components and have a very lean template, but it is possible to customize them for specific contexts, see more about this in [Customizing Components](../customizacao/customizando-components.md) e [Customizing Views](../customizacao/customizando-views.md).
 
-> A seguir veremos detalhes sobre cada conteúdo que será adicionado em cada diretório destes afim de criar uma tela
+> Below we will see details about each content that will be added in each directory in order to create a screen
 

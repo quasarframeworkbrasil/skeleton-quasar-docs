@@ -1,20 +1,18 @@
 ---
-description: >-
-  Nosso trabalho começa por definir o domínio do recurso com o qual iremos
-  trabalhar
+description: Our work begins by defining the domain of the resource with which we will work
 ---
 
 # Domains
 
-Domínio é um termo complicado de se explicar. Tentando ver o significado da palavra no nosso idioma teremos algo que não é muito apropriado para a informática.
+Domain is a complicated term to explain. Trying to see the meaning of the word in our language we will have something that is not very appropriate for computers.
 
 ![resultado da pesquisa pela palavra dom&#xED;nio no google](../.gitbook/assets/image-36.png)
 
-Quando fazemos a mesma pesquisa em inglês os resultados dão uma mudada e começamos a nos aproximar do que é esperado para a informática
+When we do the same research in English the results change and we start to get closer to what is expected for computing
 
-![resultado da pesquisa pela palavra domain no google](../.gitbook/assets/image-39.png)
+![search result for the word domain on google](../.gitbook/assets/image-39.png)
 
-A definição acima `"a specified sphere of activity or knowledge"` é o que vou usar como referência para explicar o propósito da pasta `domain`. Se por acaso já tiver ouvido falar de Domain Driven Design \(DDD\) também vai dar uma mão na compreensão do termo.
+The above definition "`a specified sphere of activity or knowledge`" is what I will use as a reference to explain the purpose of the`domain`folder. If you happen to have heard of Domain Driven Design \(DDD\) you will also have a hand in understanding the term.
 
-O projeto trata domínios como um grupo de recursos que fazem sentido estarem agrupados. Não há uma necessidade física de estarem juntos, mas há uma certa familiaridade entre eles. O que está em cada domínio é geralmente cunhado como entidade ou `entity`. Então vamos agrupar nossas entidades em domínios para mapear nossas regras de negócio, estados e comportamentos. A representação das entidades na metodologia aplicada é o [`schema`](schema.md). Logo dentro da pasta domains teremos `schemes` e `services` à disposição dos componentes. Alguns recursos de suporte à eles também estarão disponíveis por lá como arquivos de rotas e de internacionalização, mas o foco dele é agrupar o que chamaremos de `business rules` \(`behaviours` & `states`\).
+The project treats domains as a group of resources that make sense to be grouped together. There is no physical need to be together, but there is a certain familiarity between them. What is in each domain is usually coined as an`entity`. So let's group our entities into domains to map our business rules, states and behaviors. The representation of entities in the applied methodology is the[`schema`](schema.md). Right inside the domains folder, we will have`schemes` and `services` available to the components. Some support resources for them will also be available there as route and internationalization files, but his focus is to group what we will call`business rules` \(`behaviours` & `states`\).
 

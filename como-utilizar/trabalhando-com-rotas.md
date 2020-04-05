@@ -1,57 +1,57 @@
 ---
 description: >-
-  Vamos entender como é feita a composição de rotas para o VueRouter  no
-  Skeleton, já que a mesma é feita de forma diferente do padrão que se costuma
-  ver em projetos Quasar ou Vue
+  Let's understand how the composition of routes for VueRouter in Skeleton is
+  done, since it is done differently from the standard that is usually seen in
+  Quasar or Vue projects
 ---
 
 # Routes
 
-Em `src/router/index.js` fica a criação do roteador da aplicação. Há alguns detalhes um pouco diferentes do padrão que o template do [Quasar](https://quasar.dev) entrega. Vamos ver um sobre essas diferenças à seguir.
+In`src/router/index.js` is the creation of the application router. There are some details slightly different from the standard that the [Quasar](https://quasar.dev) template delivers. We will see one about these differences below.
 
-## Uso do AppRouter
+## Using AppRouter
 
-Logo do começo do `index.js` será possível ver que há um import para um arquivo chamado `AppRouter.` Isto será visto em um trecho parecido com o trecho abaixo.
+From the beginning of`index.js` you can see that there is an import for a file called`AppRouter`. This will be seen in a section similar to the section below.
 
 ![](../.gitbook/assets/image-12.png)
 
-Este arquivo é uma classe que estende o `VueRouter` permitindo modificar, aprimorar e adicionar comportamentos ao roteador.
+This file is a class that extends`VueRouter`allowing to modify, improve and add behaviors to the router.
 
 ![](../.gitbook/assets/image-5.png)
 
-## Injeção do `Router`
+## Router Injection
 
-Além de configurar dois `middleware` base também há a configuração das rotas. Esta configuração é feita de uma forma diferente, ao invés de "puxar" as rotas e adicioná-las como argumento na construção do `router` são importadas funções \(também chamadas de `RouteFile`\) que recebem o `$router` como argumento para que cada módulo seja responsável por adicionar suas rotas.
+In addition to configuring two base`middleware`, there is also the configuration of the routes. This configuration is done in a different way, instead of "pulling" the routes and adding them as an argument in the construction of the`router`functions are imported \(also called`RouteFile`\) that receive the $ router as an argument so that each module is responsible for add your routes.
 
 ![](../.gitbook/assets/image-6.png)
 
-Esta mudança permite que os módulos tenham mais independência sobre as configurações que podem fazer no projeto. Logo, ao invés de ter apenas um `beforeEach`, por exemplo, teremos vários `middleware` deste tipo distribuídos pelo projeto.
+This change allows the modules to have more independence over the configurations they can make in the project. So, instead of having just one`beforeEach`, for example, we will have several`middleware`of this type distributed by the project.
 
 ## Auth `RouteFile`
 
-O `RouteFile` do `module` Auth fica em `src/modules/Auth/router/routeFile.js` e é bem simples, tendo apenas uma rota. Como falado à pouco ele recebe o router como parâmetro e utiliza o método `addRoutes` para adicionar as rotas. No caso estão sendo usados helpers `route` e `group` para criar as rotas. Estas funções constroem objetos compatíveis com a [RouteConfig](https://router.vuejs.org/api/#routes) que são as estruturas tradicionais de rotas.
+The`RouteFile` of the Auth`module`is located in`src/modules/Auth/router/routeFile.js` and is very simple, with only one route. As mentioned earlier, it receives the router as a parameter and uses the`addRoutes`method to add the routes. In this case, helpers`route` and `group` are being used to create the routes. These functions build objects compatible with [RouteConfig](https://router.vuejs.org/api/#routes) which are the traditional route structures.
 
 ![](../.gitbook/assets/image-8.png)
 
 ## Dashboard `RouteFile`
 
-Alocado em `src/modules/Dashboard/router/routeFile.js` a composição de rotas do `Dashboard` será bem mais extensa que a do `Auth`. Este `module` irá abrigar todo "painel de controle", por isso ao invés de definir todas as rotas nele mesmo são feitos imports de outros arquivos de rota. As demais rotas ficam junto do domínio do Schema e devem exportar sempre arrays. Para poder acessar os recursos que serão criados será preciso registar as rotas que criarmos nesse arquivo, por isso ele será lembrado mais pra frente.
+Allocated in`src/modules/Dashboard/router/routeFile.js` the`Dashboard`route composition will be much more extensive than that of`Auth`. This`module`will house the entire "control panel", so instead of defining all routes in it, imports of other route files are made. The other routes are close to the Schema domain and must always export arrays. In order to access the resources that will be created, it will be necessary to register the routes that we create in this file, so it will be remembered later.
 
 ![](../.gitbook/assets/image-22.png)
 
-## Arquivos de Rotas
+## Route Files
 
-Um arquivo de rotas precisa simplesmente exportar uma função que retorne um array de rotas como a imagem abaixo.
+A route file simply needs to export a function that returns an array of routes like the image below.
 
 ![](../.gitbook/assets/image-13.png)
 
-### Criando Rotas de CRUD
+### Creating CRUD Routes
 
-Quando se está criando uma quantidade grande de telas é comum repetir diversas vezes vários trechos e configurações. Para acelerar a criação é possível usar alguns helpers para a criação de rotas para CRUD, como pode ser visto no exemplo abaixo.
+When creating a large number of screens, it is common to repeat several sections and configurations several times. To speed up the creation it is possible to use some helpers to create routes for CRUD, as can be seen in the example below.
 
 ![](../.gitbook/assets/image-33.png)
 
-Este trecho acima cria um conjunto de 5 rotas devidamente configuradas. Para utilizar alguns recursos que estão pré-configurados no projeto é preciso configurar alguns detalhes no meta das rotas. A função `crud` já resolve isso e introduz o `scope` e o `namespace` no [`meta`](https://router.vuejs.org/guide/advanced/meta.html) das rotas, permitindo que sejam passadas configurações adicionais. O exemplo a seguir é um trecho do arquivo [`src/app/Util/routing.js`](https://github.com/quasarframeworkbrasil/skeleton/blob/master/src/app/Util/routing.js#L53).
+This section above creates a set of 5 properly configured routes. To use some resources that are preconfigured in the project, it is necessary to configure some details in the route meta. The`crud`function already solves this and introduces the`scope`and`namespace`in the route [`meta`](https://router.vuejs.org/guide/advanced/meta.html), allowing additional configurations to be passed. The following example is an excerpt from the [`src/app/Util/routing.js`](https://github.com/quasarframeworkbrasil/skeleton/blob/master/src/app/Util/routing.js#L53).
 
-![Trecho da fun&#xE7;&#xE3;o crud de src/app/Util/routing](../.gitbook/assets/image-14.png)
+![Excerpt from the crud function of src/app/Util/routing](../.gitbook/assets/image-14.png)
 

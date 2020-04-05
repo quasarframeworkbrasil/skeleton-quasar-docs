@@ -1,2 +1,2 @@
-# Como Contribuir
+# How to contribute
 

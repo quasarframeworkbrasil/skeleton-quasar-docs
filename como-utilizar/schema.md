@@ -1,54 +1,52 @@
 ---
-description: >-
-  O schema é a definição dos comportamentos e estados das nossas regras de
-  negócio
+description: The schema is the definition of the behaviors and states of our business rules
 ---
 
 # Schema
 
-Ao definirmos um `schema` vamos informar quais campos serão usados, quais eventos estes campos irão manipular, os componentes que serão usados nos formulários por cada um dos campos e como será exibida a tabela que carrega os dados relacionados à entidade que o `schema` representa. Além dos campos também as ações \(botões\) disponíveis e comportamentos dos componentes serão mapeados.
+When defining a`schema`we will inform which fields will be used, which events these fields will handle, the components that will be used in the forms for each of the fields and how the table that carries the data related to the entity that the`schema`represents will be displayed. In addition to the fields, the available actions \(buttons\) and component behaviors will also be mapped.
 
-Resumidamente com os `schemes` serão criados todos os `forms` e `tables` que serão renderizados. O objetivo de um `schema` é criar os artefatos necessários para que os componentes de criação de formulários e tabelas tenham dados suficientes para trabalhar.
+Briefly with the`schemes`, all`forms` and `tables` that will be rendered will be created. The purpose of a`schema`is to create the necessary artifacts so that the components of creating forms and tables have enough data to work with.
 
-Para gerenciar os campos temos dois métodos:
+To manage the fields we have two methods:
 
-* `addField`: adiciona um novo campo ao `schema`;
-* `getField`: seleciona um campo que já faz parte do `schema` para ser manipulado;
+* `addField`: adds a new field to the`schema`;
+* `getField`: select a field that is already part of the `schema`to be manipulated;
 
-Para manipular as propriedades relacionadas à table:
+To manipulate table-related properties:
 
-* `fieldTableWidth`: define a largura do campo na tabela;
-* `fieldTableShow`: define se o campo será visível ou não na tabela;
-* `fieldTableWhere`: determina se o campo será exibido na pesquisa lateral da tabela;
-* `fieldTableFilter`: define se o campo será usado como um filtro fixo na parte superior da tabela;
-* `fieldTableRequired`: especifica se é possível ocultar o campo;
-* `fieldTableName`: permite alterar o nome da propriedade que está sendo acessada na lista;
-* `fieldTableAlign`: configura o alinhamento na tabela;
-* `fieldTableSortable`: determina se é possível aplicar ordenação através desse campo;
-* `fieldTableFormat`: função que será usada para formatar os valores da coluna antes de exibir na linha;
-* `fieldTableOrder`: permite configurar a ordenação do campo entre os campos da tabela;
+* `fieldTableWidth`: defines the width of the field in the table;
+* `fieldTableShow`: defines whether the field will be visible or not in the table;
+* `fieldTableWhere`: determines whether the field will be displayed in the table side search;
+* `fieldTableFilter`: defines whether the field will be used as a fixed filter at the top of the table;
+* `fieldTableRequired`: specifies whether it is possible to hide the field;
+* `fieldTableName`: allows changing the name of the property being accessed in the list;
+* `fieldTableAlign`: configure the alignment in the table;
+* `fieldTableSortable`: determines whether it is possible to apply sorting through that field;
+* `fieldTableFormat`: function that will be used to format column values before displaying on the line;
+* `fieldTableOrder`: it allows configuring the field ordering between the table fields;
 
-Para determinar os componentes que serão usados pelos campos temos:
+To determine the components that will be used by the fields we have:
 
-* `fieldIsInput`: determina que o campo usará um componente de texto padrão;
-* `fieldIsNumber`: determina que o campo usará um componente de input do tipo numérico;
-* `fieldIsPassword`: determina que o campo usará um componente de input do tipo password com hashs nos caracteres;
-* `fieldIsEmail`: determina que o campo usará um componente de input do tipo e-mail, de acordo com as validações criadas para o mesmo;
-* `fieldIsText`: determina que o campo usará um componente de textarea parecido com um bloco de notas;
-* `fieldIsCheckbox`: determina que o campo usará um componente de checkbox;
-* `fieldIsRadio`: determina que o campo usará um componente de radio button, passando os valores através de parâmetro;
+* `fieldIsInput`: determines that the field will use a standard text component;
+* `fieldIsNumber`: determines that the field will use a numeric type input component;
+* `fieldIsPassword`: determines that the field will use an input component of type password with hashes in the characters;
+* `fieldIsEmail`: determines that the field will use an e-mail input component, according to the validations created for it;
+* `fieldIsText`: determines that the field will use a textarea component similar to a notepad;
+* `fieldIsCheckbox`: determines that the field will use a checkbox component;
+* `fieldIsRadio`: determines that the field will use a radio button component, passing the values through a parameter;
 * `fieldIsSelect`: ;
 * `fieldIsSelectRemote`: ;
 * `fieldIsSelectRemoteMultiple`: ;
 * `fieldIsToggle`: ;
-* `fieldIsDate`: determina que o campo usará um componente de Data, as configurações devem ser passadas via atributo;
-* `fieldIsDatetime`: determina que o campo usará um componente de Data e Hora, as configurações devem ser passadas via atributo;
+* `fieldIsDate`: determines that the field will use a Data component, the settings must be passed via an attribute;
+* `fieldIsDatetime`: determines that the field will use a Date and Time component, the settings must be passed via attribute;
 * `fieldIsInputPlan`: ;
-* `fieldIsArray`: determina que o campo usará um componente de CRUD customizado, sua funcionalidade é a mesma que de um crud;
+* `fieldIsArray`: determines that the field will use a customized CRUD component, its functionality is the same as that of a crud;
 * `fieldIsCurrency`: ;
 * `fieldIsButton`: ;
 
-Há ainda algumas macros disponíveis para configurar alguns campos:
+There are still some macros available to configure some fields:
 
 * `fieldAsPrimaryKey`: ;
 * `fieldAsZip`: ;
@@ -56,7 +54,7 @@ Há ainda algumas macros disponíveis para configurar alguns campos:
 * `fieldAsCell`: ;
 * `fieldAsMasked`: ;
 
-Para manipular propriedades relacionadas ao form temos os seguintes métodos:
+To manipulate properties related to the form we have the following methods:
 
 * `fieldFormWidth`: ;
 * `fieldFormDisabled`: ;
@@ -71,7 +69,7 @@ Para manipular propriedades relacionadas ao form temos os seguintes métodos:
 * `fieldFormPlaceholder`: ;
 * `fieldFormOrder`: ;
 
-Para tratar sobre validação temos os seguintes métodos:
+To deal with validation we have the following methods:
 
 * `validationAdd`: ;
 * `validationAs`: ;

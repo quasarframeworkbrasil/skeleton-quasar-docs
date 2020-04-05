@@ -1,42 +1,42 @@
 ---
 description: >-
-  Para poder configurar a estrutura existe uma pasta que centraliza o que é
-  parametrizável dentro do projeto
+  In order to configure the structure, there is a folder that centralizes what
+  is configurable within the project
 ---
 
 # Settings \[project\]
 
-A pasta `src/settings` possui vários arquivos de configuração. Através deles é possível configurar uma série de recursos que veremos a seguir.
+The`src/settings`folder has several configuration files. Through them it is possible to configure a series of resources that we will see below.
 
 ## `components.js`
 
-Configura os componentes da aplicação de um modo geral. Através dele podemos aplicar configurações à todos os campos de texto do sistema, por exemplo.
+Configures the application components in general. Through it we can apply settings to all text fields in the system, for example.
 
 ## `date.js`
 
-Lida com os formatos e configurações de datas que são suportadas
+Handles the date formats and settings that are supported
 
 ## `field.js`
 
-Constitui uma fábrica de construção de campos com todas as propriedades que um campo deve possuir.
+It constitutes a field construction factory with all the properties that a field must have.
 
 ## `http.js`
 
-Instância de cliente HTTP para realizar conexões na API base da aplicação. Possui interceptadores e será alterado para passar `headers` e modificar as configurações básicas de conexão.
+HTTP client instance to make connections to the application's base API. It has interceptors and will be changed to pass`headers`and modify the basic connection settings.
 
 ## `local.js`
 
-É a instância de cliente HTTP para fazer requests para o próprio projeto. Ele cria um cliente que aponta para a URL na qual o projeto está disponível no navegador.
+It is the HTTP client instance to make requests for the project itself. It creates a client that points to the URL where the project is available in the browser.
 
 ## `report.js`
 
-Representa as configurações que podem ser feitas para executar os relatórios.
+Represents the settings that can be made to run the reports.
 
 ## `rest.js`
 
-Possui recursos para adaptar a comunicação da classe `Rest` com as respostas que as APIs retornam.
+It has resources to adapt the`Rest`class communication with the responses that the APIs return.
 
 ## `schema.js`
 
-Agrupa as principais propriedades que podemos alterar na construção do `schema` e conversão de um `field` em um componente [`Vue`](https://vuejs.org).
+It groups the main properties that we can change when constructing the`schema`and converting a`field`into a [`Vue`](https://vuejs.org)component.
 
