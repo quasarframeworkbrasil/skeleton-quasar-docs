@@ -6,7 +6,7 @@ description: Cada módulo é um ponto de partida de central para uma estrutura d
 
 Os módulos possuem os recursos base para renderizar a estrutura que será usada para montar todas as suas telas filhas. Para isso serão configurados componentes para fazer a apresentação, rotas, gerenciadores de estado e etc. A aplicação já possui dois módulos criados: Auth e Dashboard.
 
-![](../.gitbook/assets/image%20%2829%29.png)
+![](../.gitbook/assets/image-29.png)
 
 ## Módulo Auth
 
@@ -38,7 +38,7 @@ Integra todas as rotas de dominios que são usados para criar telas para o módu
 
 ### components
 
-Possui componentes para renderizar o menu superior direito e o menu lateral  esquerdo \(drawer\).
+Possui componentes para renderizar o menu superior direito e o menu lateral esquerdo \(drawer\).
 
 ## Criando um novo módulo
 
@@ -92,6 +92,4 @@ import myModule from 'src/modules/MyModule/store'
   })
 ```
 {% endcode %}
-
-
 
