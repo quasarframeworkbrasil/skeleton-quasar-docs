@@ -102,5 +102,3 @@ Para tratar sobre validação temos os seguintes métodos:
 * `validationClear`: ;
 * `validationRemove`: ;
 
-
-
