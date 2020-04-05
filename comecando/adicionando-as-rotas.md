@@ -1,10 +1,10 @@
 ---
-description: As rotas permitem que possamos acessar os recursos definidos
+description: Routes allow us to access the defined resources
 ---
 
-# Adicionando as rotas
+# Adding routes
 
-Para criar as rotas básicas vamos adicionar um novo arquivo no domínio no qual estamos trabalhando chamado `routes.js`. Este arquivo irá importar funções auxiliares para criação de rotas e os valores de `domain` e de `path` do arquivo criado anteriormente.
+To create the basic routes we will add a new file to the domain we are working on called`routes.js`. This file will import auxiliary functions for creating routes and the`domain`and`path`values of the previously created file.
 
 {% code title="src/domains/General/Category/routes.js" %}
 ```javascript
@@ -31,15 +31,15 @@ export default () => {
 ```
 {% endcode %}
 
-É possível perceber que as funções auxiliares tem papel fundamental neste arquivo. São elas que vão usar os componentes que criamos e criar todas as 5 rotas que serão responsáveis por desenhar as telas.
+It is possible to notice that the auxiliary functions play a fundamental role in this file. They will use the components we create and create all 5 routes that will be responsible for designing the screens.
 
 {% hint style="info" %}
-Este arquivo deve sempre retornar um `array` para que ele possa ser registrado no `routeFile` do módulo no qual será usado, para ver mais sobre a manipulação de rotas confira a página [Routes](../como-utilizar/trabalhando-com-rotas.md)
+This file must always return an `array`so that it can be registered in the module's`routeFile`in which it will be used, to see more about route manipulation check the [Routes](../como-utilizar/trabalhando-com-rotas.md) page
 {% endhint %}
 
-Depois de criarmos o arquivo de rotas devemos registrar ele no `routeFile` de agregação mais apropriado. No nosso caso é o `src/modules/Dashboard/router/routeFile.js` e isso vai variar de acordo com a organização criada para o projeto. Podemos criar outros módulos ou arquivos para agregar outros arquivos em outros domínios.
+After creating the route file, we must register it in the most appropriate aggregation`routeFile`. In our case it is`src/modules/Dashboard/router/routeFile.js` and this will vary according to the organization created for the project. We can create other modules or files to aggregate other files in other domains.
 
-Depois de adicionar as rotas que criamos o `routeFile` ficará semelhante ao trecho abaixo.
+After adding the routes we created, the`routeFile`will look similar to the excerpt below.
 
 ```javascript
 import { group, redirect, route } from 'src/app/Util/routing'
@@ -73,7 +73,7 @@ export default (router) => {
 }
 ```
 
-Depois de tudo que fizemos até aqui é possível ver as telas que foram pré-configuradas. O próximo passo do tutorial é vermos este resultado e compreender os conceitos de como trabalhar com ele.
+After everything we've done so far, you can see the screens that have been pre-configured. The next step in the tutorial is to see this result and understand the concepts of how to work with it.
 
 {% page-ref page="trabalhando-com-as-telas.md" %}
 

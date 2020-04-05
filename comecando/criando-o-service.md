@@ -1,18 +1,18 @@
 ---
 description: >-
-  As aplicações front-end precisando se comunicar com serviços que entregam
-  dados e geralmente esses serviços usam HTTP
+  Front-end applications needing to communicate with services that deliver data
+  and generally these services use HTTP
 ---
 
-# Preparando o acesso à API
+# Preparing API access
 
-Seguindo com nosso exemplo, vamos criar dentro de `src/domains/General/Category` uma pasta chamada `Schema`. Dentro desta pasta crie um arquivo chamado `CategoryService.js`, tendo no final um caminho `src/domains/General/Category/Schema/CategoryService.js`.
+Following our example, let's create a folder called`Schema`inside`src/domains/General/Category`. Within this folder, create a file called`CategoryService.js`, with a`src/domains/General/Category/Schema/CategoryService.js` path at the end.
 
 {% hint style="info" %}
-Estes caminhos podem variar de acordo com as necessidades de cada um e estão aqui apenas como sugestão. Com um pouco de experiência é possível compreender o que está sendo feito e usar da forma que julgar conveniente
+These paths may vary according to the needs of each one and are here only as a suggestion. With a little experience it is possible to understand what is being done and use it as you see fit
 {% endhint %}
 
-O conteúdo desse documento será uma classe semelhante ao trecho abaixo. Ao estender a class `Rest` a class `CategoryService` herda todos os comportamentos dela. Estes comportamentos englobam métodos que fazem a criação, leitura, atualização e deleção de recursos da entidade `Category`.
+The content of this document will be a class similar to the excerpt below. When extending the`Rest`class, the`CategoryService`class inherits all of its behavior. These behaviors include methods that create, read, update and delete resources from the`Category`entity.
 
 {% code title="CategoryService.js" %}
 ```javascript
@@ -31,13 +31,13 @@ export default class CategoryService extends Rest {
 ```
 {% endcode %}
 
-Note o uso da propriedade `resource` que é importada do `settings.js`. Para conhecer mais detalhes sobre [`Services`](../como-utilizar/service.md) dentro do projeto acesse [esta página](../como-utilizar/service.md).
+Note the use of the`resource`property that is imported from settings.js. To know more details about [`Services`](../como-utilizar/service.md)within the project visit this [page](../como-utilizar/service.md).
 
 {% hint style="warning" %}
-Não há uma classe para consumir recursos usando [`GraphQL`](https://graphql.org), mas a lógica é basicamente a mesma e com algum conhecimento de JavaScript é possível criar uma abstração também para este tipo de serviço
+There is no class to consume resources using [`GraphQL`](https://graphql.org)`,`but the logic is basically the same and with some knowledge of JavaScript it is possible to create an abstraction for this type of service as well.
 {% endhint %}
 
-Esta classe será usada a seguir para prover acesso aos endpoints da entidade, vamos seguir para o próximo passo.
+This class will be used next to provide access to the entity's endpoints, let's move on to the next step.
 
 {% page-ref page="definindo-o-schema.md" %}
 

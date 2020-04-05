@@ -1,14 +1,14 @@
 ---
 description: >-
-  Com o schema e o settings definidos podemos seguir para o próximo passo que é
-  criar as views responsáveis por renderizar as telas
+  With the schema and settings defined we can proceed to the next step which is
+  to create the views responsible for rendering the screens
 ---
 
-# Criando as views
+# Creating the views
 
-Os componentes de apresentação padrão são relativamente simples e não precisam de uma implementação muita extensa.
+The standard presentation components are relatively simple and do not need a very extensive implementation.
 
-A sugestão da estrutura é colocar as views da entidade `Category` do domínio `General` dentro módulo `Dashboard` dentro de uma pasta com o caminho`src/views/dashboard/general/category`. Depois de criar esse diretório podemos criar as duas views que são necessárias para manter as operações de criar, visualizar, editar, apagar e pesquisar os registros desta entidade: `CategoryForm.vue` e `CategoryTable.vue`. A seguir poderemos ver exemplos de implementação dos dois.
+The suggestion of the structure is to place the views of the`Category`entity of the`General`domain within the`Dashboard`module inside a folder with the path `src/views/dashboard/general/category`. After creating this directory we can create the two views that are necessary to maintain the operations of creating, viewing, editing, deleting and searching the records of this entity: `CategoryForm.vue` and `CategoryTable.vue`. Below we can see examples of implementation of the two.
 
 {% code title="src/views/dashboard/general/category/CategoryForm.vue" %}
 ```markup
@@ -47,7 +47,7 @@ export default {
 ```
 {% endcode %}
 
-Este `form` será responsável por definir a exibição dos dados da entidade. É possível perceber que o `schema` de `Category` é importado para configurar o componente.
+This`form`will be responsible for defining the display of the entity's data. It is possible to notice that the `Category schema`is imported to configure the component.
 
 {% code title="src/views/dashboard/general/category/CategoryTable.vue" %}
 ```markup
@@ -86,9 +86,9 @@ export default {
 ```
 {% endcode %}
 
-O componente acima é a `table` que será usada para exibir os registros que serão consumidos pelo serviço que criamos. Assim como no `form` o `schema` tem papel importante nesse componente.
+The above component is the`table`that will be used to display the records that will be consumed by the service we create. As in the`form`, the`schema`plays an important role in this component.
 
-Agora que já criamos o `domain` \(e configuramos\), o `service`, o `schema` e as `views` vamos criar as rotas para poder ver os componentes sendo exibidos.
+Now that we have created the`domain`\(and configured\), the`service`, the`schema`and the`views`, we will create the routes to be able to see the components being displayed.
 
 {% page-ref page="adicionando-as-rotas.md" %}
 

@@ -1,12 +1,12 @@
 ---
-description: A configuração o domínio é a base para a criação dos artefatos do domínio
+description: The domain configuration is the basis for creating the domain artifacts
 ---
 
-# Configurando o domínio
+# Configuring the domain
 
-Dentro desta pasta `src/domains/General/Category` criada anteriormente \(veja [Domain](../como-utilizar/domain.md)\) iremos criar o `settings.js` da entidade `Category`. O caminho final desse arquivo então será `src/domains/General/Category/settings.js`. Os [Settings File](../como-utilizar/settings.md) são documentos que agregam propriedades básicas de configuração do domínio.
+Within this folder `src/domains/General/Category` created previously \(see [Domains](../como-utilizar/domain.md)\) we will create the `settings.js` of the`Category`entity. The final path to this file will then be `src/domains/General/Category/settings.js`. [Settings File](../como-utilizar/settings.md) are documents that aggregate basic domain configuration properties.
 
-Dentro deste arquivo vamos exportar as 3 consts comumente usados por ele: `path`, `domain` e `resource`.
+Within this file we will export the 3 consts commonly used by it: `path`, `domain` and `resource`.
 
 {% code title="src/domains/General/Category/settings.js" %}
 ```javascript
@@ -27,11 +27,11 @@ export const resource = '/general/category'
 ```
 {% endcode %}
 
-Em [`path`](../como-utilizar/settings.md#path) vamos informar a URL base das telas do domínio que estamos configurando, para ver mais sobre isso confira a página [Settings](../como-utilizar/settings.md#path).
+In [`path`](../como-utilizar/settings.md#path) we will inform the base URL of the domain screens that we are configuring, to see more about it check the [Settings](../como-utilizar/settings.md#path) page.
 
-A propriedade [`domain`](../como-utilizar/settings.md#domain), por sua vez, está com o valor `general.category` porque o caminho para o domínio é `src/domains/General/Category` e o mesmo será usado para recuperar alguns recursos necessários nas construções das telas.
+The [`domain`](../como-utilizar/settings.md#domain)property, in turn, has the value `general.category` because the path to the domain is `src/domains/General/Category` and it will be used to recover some resources needed in the construction of the screens.
 
-Por fim em [`resource`](../como-utilizar/settings.md#resource), foi utilizado o valor `/general/category` que será usado para compor as requisições que serão feitas às APIs utilizadas.
+Finally, in[`resource`](../como-utilizar/settings.md#resource), the value`/general/category` was used to compose the requests that will be made to the APIs used.
 
 {% page-ref page="criando-o-service.md" %}
 

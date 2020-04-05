@@ -1,14 +1,14 @@
 ---
 description: >-
-  Os schema são agrupamento de recursos que serão usados para prover
-  comportamentos e estados para as regras de negócio
+  Schemas are grouping of resources that will be used to provide behaviors and
+  states for business rules
 ---
 
-# Definindo o schema
+# Defining the schema
 
-## Criando o Schema
+## Creating the Schema
 
-Para criar um `schema` para a entidade `Category` criaremos dentro da pasta `Schema` do domínio um arquivo `CategorySchema.js` \(`src/domains/General/Category/Schema/CategorySchema.js`\). Este arquivo deverá estender a classe `Schema`. O resultado inicial será um documento como o do trecho a seguir.
+To create a`schema`for the`Category`entity, we will create a`CategorySchema.js` file within the domain's`Schema`folder \(`src/domains/General/Category/Schema/CategorySchema.js`\) This file should extend the`Schema`class. The initial result will be a document like the one below.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
@@ -24,9 +24,9 @@ export default class CategorySchema extends Schema {
 ```
 {% endcode %}
 
-## Importando Recursos
+## Importing resources
 
-Esta definição é a mais básica que podemos fazer para esta classe porque o método `construct` deve ser implementado mesmo nessa primeira versão. Além desse método vamos fazer mais algumas configurações, informando na estrutura da classe as propriedades: `domain`, `path` e `service`.
+This definition is the most basic that we can do for this class because the`construct`method must be implemented even in this first version. In addition to this method, we will make some more configurations, informing the class structure the properties: `domain`, `path` and `service`.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
@@ -62,11 +62,11 @@ export default class CategorySchema extends Schema {
 ```
 {% endcode %}
 
-As propriedades estáticas `domain` e `path` são importados do `settings.js` que definimos em [Configurando o domínio](configurando-o-dominio.md) e a propriedade `service` é o arquivo `CategoryService.js` que criamos em [Preparando o acesso à API](criando-o-service.md).
+The static domain and path properties are imported from the`settings.js` that we defined in [Configuring the domain](configurando-o-dominio.md)  and the`service`property is the`CategoryService.js` file that we created in [Preparing access to the API](criando-o-service.md).
 
-## Criando o Campo `name`
+## Creating the`name`field
 
-Com o nosso schema inciado vamos configurar os campos que serão usados pela entidade. Para isso vamos usar o método `addField` que deve ser chamado dentro do `construct`.
+With our schema started we will configure the fields that will be used by the entity. For this we will use the`addField`method that must be called within the`construct`.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
@@ -88,9 +88,9 @@ export default class CategorySchema extends Schema {
 ```
 {% endcode %}
 
-No trecho de código acima declaramos que o nosso `schema` irá trabalhar com o campo `name`. Por padrão um campo criado não é exibido na `table` e é exibido no `form` com uma largura que ocupa 100% da linha num campo de texto. O campo `primaryKey` é carregado de forma implícita em todos os filhos de `Schema`. Portanto, nossa classe está mapeando dois campos: `id` e `name`. Mais adiante veremos as configurações dos campos e tudo que podemos fazer com eles, além de outros recursos configuráveis nos nossos [`schema`](../como-utilizar/schema.md).
+In the code snippet above we declare that our`schema`will work with the`name`field. By default, a created field is not displayed in the`table`and is displayed on the`form`with a width that occupies 100% of the line in a text field. The`primaryKey`field is loaded implicitly in all children of`Schema`. Therefore, our class is mapping two fields: `id` and `name`. Later on we will see the settings of the fields and everything we can do with them, in addition to other configurable features in our[`schema`](../como-utilizar/schema.md).
 
-No próximo passo veremos como adicionar algumas rotas para podermos ver nossa tela sendo renderizada.
+In the next step we will see how to add some routes so that we can see our screen being rendered.
 
 {% page-ref page="criando-as-views.md" %}
 

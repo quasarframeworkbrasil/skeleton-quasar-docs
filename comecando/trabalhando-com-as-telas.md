@@ -1,32 +1,32 @@
 ---
 description: >-
-  Neste passo já temos artefatos suficientes para ver algum resultado sendo
-  renderizado, vamos ver como trabalhar com eles agora
+  In this step we already have enough artifacts to see some results being
+  rendered, let's see how to work with them now
 ---
 
-# Trabalhando com as telas
+# Working with the screens
 
-## Acessando as telas
+## Accessing the screens
 
-Se acessarmos [`http://localhost:8080/#/dashboard/general/category`](http://localhost:8080/#/dashboard/general/category) será possível ver a tela que exibe a `table` da entidade `Category` que criamos \(imaginando que não foi feita nenhuma alteração no que vem por padrão de configuração no projeto\). A seguir uma imagem do resultado que pode ser visto após abrir o link acima.
+If we access [`http://localhost:8080/#/dashboard/general/category`](http://localhost:8080/#/dashboard/general/category) it will be possible to see the screen that displays the`Category`entity`table`that we created \(assuming that no changes were made to what comes by default in the project\). Below is an image of the result that can be seen after opening the link above.
 
 ![](../.gitbook/assets/image-28.png)
 
-Como podemos ver, a tela ficou vazia e foi gerado um erro no console.
+As we can see, the screen was empty and an error was generated on the console.
 
 ![](../.gitbook/assets/image-30.png)
 
-A tela está vazia porque o nosso campo ainda está visível na `table` \(além de não ter `label` definido\) e não temos uma `API` para ser consumida. Veremos como melhorar isto nos tópicos a seguir.
+The screen is empty because our field is still visible in the`table`\(in addition to not having a defined`label`\) and we don't have an`API`to be consumed. We will see how to improve this in the following topics.
 
-É possível perceber que vários recursos já são criados por padrão, botões, campo de pesquisa e uma pesquisa avançada lateral vem por padrão quando criamos uma `table` usando o componente que vem incorporado ao projeto. Mais abaixo veremos detalhes sobre eles. Caso ainda tenha dúvida vá até a sessão [Conceitos](../como-utilizar/).
+It is possible to notice that several resources are already created by default, buttons, search field and an advanced side search comes by default when we create a`table`using the component that is built into the project. Below we will see details about them. If you still have questions, go to the [Concepts](../como-utilizar/) section.
 
-## Configurando o `schema`
+## Configuring the `schema`
 
-Os `schemes` são estruturas que possuem diversos recursos para serem configurados, vamos configurar alguns a seguir. Para ver todas as configurações do `schema` vá até a página do [Schema](../como-utilizar/schema.md).
+The`schemes`are structures that have several resources to be configured, we will configure some below. To see all the`schema`settings go to the [Schema](../como-utilizar/schema.md) page.
 
-### Arquivo de Internacionalização
+### Internationalization Archive
 
-Para carregar os textos dos campos, são usados arquivos isolados com as mensagens que serão escritas. Crie um arquivo com o nome `pt-br.js` na pasta do domínio \(`src/domains/General/Category/pt-br.js`\) com as mensagens básicas necessárias. Note que estamos utilizando uma propriedade chamada `SCOPES` para definir algumas propriedades, veja mais sobre isto [aqui](../como-utilizar/scopes-e-positions.md).
+To load the texts from the fields, isolated files are used with the messages to be written. Create a file named`pt-br.js` in the domain folder \(`src/domains/General/Category/pt-br.js`\) with the necessary basic messages. Note that we are using a property called`SCOPES`to define some properties, see more about it [here](../como-utilizar/scopes-e-positions.md).
 
 {% code title="src/domains/General/Category/pt-br.js" %}
 ```javascript
@@ -69,14 +69,14 @@ export default {
 ```
 {% endcode %}
 
-Estamos usando esse nome por conta da configuração que está no `.env`.
+We are using this name because of the configuration that is in`.env`.
 
 ```bash
 # the messages group of language to use
 VUE_APP_LOCALE="pt-br"
 ```
 
-Depois de criar o arquivo precisamos registrar ele no arquivo de mensagens no diretório `lang/`. Para isso podemos acessar `src/lang/pt-br/domains.js` e adicionar o mesmo lá. O resultado será algo parecido com o trecho abaixo.
+After creating the file we need to register it in the message file in the`lang/` directory. For that we can access`src/lang/pt-br/domains.js` and add it there. The result will look something like the excerpt below.
 
 {% code title="src/lang/pt-br/domains.js" %}
 ```javascript
@@ -99,11 +99,11 @@ export default {
 ```
 {% endcode %}
 
-### Trabalhando com a `table`
+### Working with the`table`
 
-Como visto mais acima a tabela que lista os registros de Category está disponível na URL [`http://localhost:8080/#/dashboard/general/category`](http://localhost:8080/#/dashboard/general/category).
+As seen above, the table listing Category records is available at the URL [`http://localhost:8080/#/dashboard/general/category`](http://localhost:8080/#/dashboard/general/category).
 
-Para exibir um campo na `table` podemos chamar o método `fieldTableShow`.
+To display a field in the`table`, we can call the`fieldTableShow`method.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
@@ -119,11 +119,11 @@ Para exibir um campo na `table` podemos chamar o método `fieldTableShow`.
 ```
 {% endcode %}
 
-Com a internacionalização definida e o campo configurado para ser visível podemos ver que a tela da aplicação agora mostra o campo "Nome".
+With the internationalization defined and the field configured to be visible, we can see that the application screen now shows the "Name" field.
 
 ![](../.gitbook/assets/image-3.png)
 
-A table possui uma área para pesquisa avançada, para colocar o campo para aparecer nesta área podemos usar o método `fieldTableWhere`.
+The table has an area for advanced search, to put the field to appear in this area we can use the`fieldTableWhere`method.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
@@ -140,11 +140,11 @@ A table possui uma área para pesquisa avançada, para colocar o campo para apar
 ```
 {% endcode %}
 
-O resultado será algo como a imagem abaixo.
+The result will be something like the image below.
 
 ![](../.gitbook/assets/image-27.png)
 
-Para simular um conjunto de dados na `table` podemos modificar o `CategoryService` para gerar dados `fake`. Abaixo um exemplo de como ficaria uma sobrescrita do método `paginate` para gerar dados para mostrar dados falsos e popular a lista de registros. Num ambiente real é feita a adaptação do sistema de `fetch records` para lidar com as repostas da API que é consumida.
+To simulate a data set in the`table`, we can modify the`CategoryService`to generate`fake`data. Below is an example of what an override of the`paginate`method would look like to generate data to show false data and popularize the list of records. In a real environment, the`fetch records` system is adapted to deal with the responses of the API that is consumed.
 
 {% code title="src/domains/General/Category/Schema/CategoryService.js" %}
 ```javascript
@@ -206,19 +206,19 @@ export default class CategoryService extends Rest {
 ```
 {% endcode %}
 
-Então agora podemos ver os dados sendo exibidos na tela.
+So now we can see the data being displayed on the screen.
 
 ![](../.gitbook/assets/image-16.png)
 
-Acesse a página [Project Settings](../como-utilizar/project-settings.md) para saber mais sobre como configurar a parte de comunicação
+Visit the [Project Settings](../como-utilizar/project-settings.md) page to learn more about how to configure the communication part
 
-### Trabalhando com o `form`
+### Working with the`form`
 
-O mesmo `schema` que vimos que pode configurar a `table` também será responsável pelas definições dos `forms`. Podemos visualizar o form que cria um registro em [`http://localhost:8080/#/dashboard/general/category/add`](http://localhost:8080/#/dashboard/general/category/add).
+The same`schema`that we saw that you can configure the`table`will also be responsible for the definitions of the`forms`. We can view the form that creates a record in[`http://localhost:8080/#/dashboard/general/category/add`](http://localhost:8080/#/dashboard/general/category/add).
 
 ![](../.gitbook/assets/image-21.png)
 
-O campo Nome está sendo exibido porque toda vez que usamos o `addField`, diferentemente da `table` o `form` por padrão vai exibir o campo. Para ocultar o campo precisamos usar o método `fieldFormHidden`. O campo de texto é exibido devido à este ser o componente padrão para um campo que é adicionado. O método `fieldIsInput` é um método que é chamado implicitamente quando nenhum componente é definido.
+The Name field is being displayed because every time we use`addField`, unlike the`table`, the`form` by default will display the field. To hide the field we need to use the`fieldFormHidden`method. The text field is displayed because it is the standard component for a field that is added. The`fieldIsInput`method is a method that is called implicitly when no component is defined.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
@@ -236,7 +236,7 @@ O campo Nome está sendo exibido porque toda vez que usamos o `addField`, difere
 ```
 {% endcode %}
 
-É possível passar um argumento `boolean` para o método `fieldFormHidden` para determinar se ele será `hidden` ou não, o padrão é verdadeiro. Seguindo com as possibilidades podemos definir que o campo deve receber o foco no carregamento, sua largura ou se ele é obrigatório ou não.
+It is possible to pass a`boolean`argument to the`fieldFormHidden`method to determine whether it will be`hidden`or not, the default is true. Following with the possibilities we can define that the field should receive the focus on the loading, its width or if it is mandatory or not.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
@@ -254,15 +254,15 @@ construct () {
 ```
 {% endcode %}
 
-As mudanças acima farão com que o form fique dessa forma.
+The above changes will make the form look like this.
 
 ![](../.gitbook/assets/image-40.png)
 
-Dentre os detalhes temos que o parâmetro `width` do método `fieldFormWidth` corresponde à largura do campo na tela e pode receber valores entre 1 e 100 que correspondem a porcentagem da linha que será ocupada pelo campo. O padrão para essa propriedade é 100 e é por isto que na primeira vez que o form foi aberto o campo estava ocupando a linha toda e na imagem acima ocupa apenas metade dela. O método `validationRequired`, por sua vez, torna o campo obrigatório. Se clicarmos no botão _SALVAR_, o resultado será a imagem a seguir.
+Among the details we have that the`width`parameter of the`fieldFormWidth`method corresponds to the width of the field on the screen and can receive values between 1 and 100 that correspond to the percentage of the line that will be occupied by the field. The default for this property is 100, which is why the first time the form was opened, the field was occupying the entire line and in the image above it occupies only half of it. The`validationRequired`method, in turn, makes the field mandatory. If we click on the SAVE button, the result will be the following image.
 
 ![](https://github.com/3kynox/skeleton-quasar-docs/tree/b95af65d3ee68bdf34af9b56bfe9778fe205da07/.gitbook/assets/image%20%2843%29.png)
 
-A lib de validação base que é usada é o Vuelidate, logo todas as definições de validação disponíveis na lib estão disponíveis no schema.
+The base validation lib that is used is Vuelidate, so all validation definitions available in the lib are available in the schema.
 
 {% code title="src/domains/General/Category/Schema/CategorySchema.js" %}
 ```javascript
@@ -282,11 +282,11 @@ A lib de validação base que é usada é o Vuelidate, logo todas as definiçõe
 ```
 {% endcode %}
 
-Com o trecho acima conseguimos algo como o que pode ser visto abaixo.
+With the excerpt above we achieved something like what can be seen below.
 
 ![](../.gitbook/assets/image-31.png)
 
-Seguindo essa mesma dinâmica podemos adicionar mais campos e configurá-los usando os métodos disponíveis na classe `Schema` ou simplesmente criando nossos próprios métodos.
+Following this same dynamic, we can add more fields and configure them using the methods available in the`Schema`class or simply creating our own methods.
 
 {% page-ref page="proximos-passos.md" %}
 

@@ -1,18 +1,18 @@
 ---
 description: >-
-  Este é um tutorial de poucos minutos que mostra um passo-a-passo de como criar
-  um novo recurso dentro de um projeto já previamente instalado
+  This is a few-minute tutorial that shows you a step-by-step on how to create a
+  new feature within a previously installed project
 ---
 
-# Começando com o Skeleton
+# Starting with the Skeleton
 
-## Iniciar o modo de desenvolvimento
+## Start development mode
 
-Para rodar o projeto podemos usar o [CLI do Quasar](https://quasar.dev/quasar-cli/cli-documentation/commands-list#dev) ou [Docker](https://docs.docker.com/install). Todos dois são através de linha de comando com o terminal aberto na pasta raiz do projeto.
+To run the project we can use the [Quasar Cli](https://quasar.dev/quasar-cli/cli-documentation/commands-list#dev) or [Docker](https://docs.docker.com/install). All two are via command line with the terminal open in the project's root folder.
 
 ### Quasar CLI
 
-Se já tiver no seu ambiente o [CLI do Quasar](https://quasar.dev/quasar-cli/cli-documentation/commands-list#dev) devidamente instalado podemos usar o comando abaixo para iniciar o modo de desenvolvimento
+If you already have the [Quasar Cli](https://quasar.dev/quasar-cli/cli-documentation/commands-list#dev) properly installed in your environment, we can use the command below to start the development mode
 
 ```bash
 quasar dev
@@ -20,29 +20,29 @@ quasar dev
 
 ### Docker Compose
 
-Se a estação de trabalho tiver [Docker](https://docs.docker.com/install) + [Docker Compose](https://docs.docker.com/compose/install) é possível utilizar docker-compose para iniciar o modo de desenvolvimento usando
+If your workstation has [Docker](https://docs.docker.com/install) + [Docker Compose](https://docs.docker.com/compose/install), you can use docker-compose to start development mode using
 
 ```bash
 cp docker-compose.yml.develop cp docker-compose.yml
 docker-compose up
 ```
 
-### Status do Comando
+### Command Status
 
-Aguarde até ver no terminal uma saída como a da imagem abaixo. Neste ponto seu projeto estará pronto para iniciar os trabalhos.
+Wait until you see an exit at the terminal like the one in the image below. At this point your project will be ready to start work.
 
 ![](../.gitbook/assets/image-37.png)
 
-## Começando os trabalhos
+## Starting the jobs
 
-Acesse na barra de endereços do navegador a URL [`http://localhost:8080`](http://localhost:8080) e confira se aparece algo como a imagem abaixo.
+Access the URL address of your browser at the URL [`http://localhost:8080`](http://localhost:8080) and check if something like the image below appears.
 
-![A mesma tela est&#xE1; em https://quasarframeworkbrasil.github.io/skeleton-quasar](../.gitbook/assets/image-34.png)
+![The same screen is at https://quasarframeworkbrasil.github.io/skeleton-quasar](../.gitbook/assets/image-34.png)
 
-Depois de feita a instalação e de colocarmos o projeto em modo de desenvolvimento iremos implementar um novo recurso. O recurso que será criado será um cadastro simples de Categoria. O nome da classe deste cadastro será `Category` \(apenas para acompanhar o resto do código que está em inglês\), que poderia ser usado num cenário real para categorizar qualquer outro cadastro. Use o link abaixo para seguir para o próximo passo.
+After the installation is done and we put the project into development mode, we will implement a new feature. The resource that will be created will be a simple Category register. The class name for this register will be `Category` \(just to accompany the rest of the code that is in English\), which could be used in a real scenario to categorize any other register. Use the link below to proceed to the next step.
 
 {% hint style="info" %}
-O exemplo usará a entidade `Category` como referência daqui pra frente, mas sinta-se à vontade para criar o que for mais legal para você
+The example will use the `Category` entity as a reference from now on, but feel free to create what’s cool for you
 {% endhint %}
 
 {% page-ref page="iniciando-o-dominio.md" %}
