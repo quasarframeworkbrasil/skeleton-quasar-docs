@@ -31,13 +31,13 @@ docker-compose up
 
 Aguarde até ver no terminal uma saída como a da imagem abaixo. Neste ponto seu projeto estará pronto para iniciar os trabalhos.
 
-![](https://github.com/quasarframeworkbrasil/skeleton-quasar-docs/tree/837016d4104c9c9d353b7091e5fbb7e128181839/.gitbook/assets/image-37.png)
+![](../.gitbook/assets/image-35.png)
 
 ## Começando os trabalhos
 
 Acesse na barra de endereços do navegador a URL [`http://localhost:8080`](http://localhost:8080) e confira se aparece algo como a imagem abaixo.
 
-![A mesma tela est&#xE1; em https://quasarframeworkbrasil.github.io/skeleton-quasar](https://github.com/quasarframeworkbrasil/skeleton-quasar-docs/tree/837016d4104c9c9d353b7091e5fbb7e128181839/.gitbook/assets/image-34.png)
+![A mesma tela est&#xE1; em https://quasarframeworkbrasil.github.io/skeleton-quasar](../.gitbook/assets/image-36.png)
 
 Depois de feita a instalação e de colocarmos o projeto em modo de desenvolvimento iremos implementar um novo recurso. O recurso que será criado será um cadastro simples de Categoria. O nome da classe deste cadastro será `Category` \(apenas para acompanhar o resto do código que está em inglês\), que poderia ser usado num cenário real para categorizar qualquer outro cadastro. Use o link abaixo para seguir para o próximo passo.
 
