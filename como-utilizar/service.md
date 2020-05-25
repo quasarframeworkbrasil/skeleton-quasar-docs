@@ -12,11 +12,11 @@ Na pasta `app/` existem uma série de documentos que estão pré-configurados e 
 
 Caso o `service` em questão não vá atender um `CRUD` é possível estender apenas de `Http` e ter acesso apenas aos métodos referentes aos verbos `HTTP`.
 
-![Exemplo de service que usa apenas a classe Http](https://github.com/quasarframeworkbrasil/skeleton-quasar-docs/tree/837016d4104c9c9d353b7091e5fbb7e128181839/.gitbook/assets/image-35.png)
+![Exemplo de service que usa apenas a classe Http](../.gitbook/assets/image-34.png)
 
 Um service criado para resolver as operações básicas vai estender de `Rest` e terá uma sintaxe parecida com a imagem abaixo.
 
-![Service Rest simples](https://github.com/3kynox/skeleton-quasar-docs/tree/b95af65d3ee68bdf34af9b56bfe9778fe205da07/.gitbook/assets/image%20%2844%29.png)
+![Service Rest simples](../.gitbook/assets/image-33.png)
 
 ### `Http`
 
@@ -30,5 +30,5 @@ Para suprir os 4 pilares da gestão das entidades ela já conta com os métodos 
 Para se adaptar à diferentes APIs existe em `src/settings/rest.js` duas funções que podem ser adaptadas para extrair os dados da resposta da requisição e passarem para o formato que o projeto espera
 {% endhint %}
 
-![](https://github.com/quasarframeworkbrasil/skeleton-quasar-docs/tree/837016d4104c9c9d353b7091e5fbb7e128181839/.gitbook/assets/image-18.png)
+![](../.gitbook/assets/image-18.png)
 

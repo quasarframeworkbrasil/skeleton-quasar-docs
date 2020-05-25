@@ -8,11 +8,11 @@ description: >-
 
 Domínio é um termo complicado de se explicar. Tentando ver o significado da palavra no nosso idioma teremos algo que não é muito apropriado para a informática.
 
-![resultado da pesquisa pela palavra dom&#xED;nio no google](https://github.com/quasarframeworkbrasil/skeleton-quasar-docs/tree/837016d4104c9c9d353b7091e5fbb7e128181839/.gitbook/assets/image-36.png)
+![resultado da pesquisa pela palavra dom&#xED;nio no google](../.gitbook/assets/image-36.png)
 
 Quando fazemos a mesma pesquisa em inglês os resultados dão uma mudada e começamos a nos aproximar do que é esperado para a informática
 
-![resultado da pesquisa pela palavra domain no google](https://github.com/quasarframeworkbrasil/skeleton-quasar-docs/tree/837016d4104c9c9d353b7091e5fbb7e128181839/.gitbook/assets/image-39.png)
+![resultado da pesquisa pela palavra domain no google](../.gitbook/assets/image-39.png)
 
 A definição acima `"a specified sphere of activity or knowledge"` é o que vou usar como referência para explicar o propósito da pasta `domain`. Se por acaso já tiver ouvido falar de Domain Driven Design \(DDD\) também vai dar uma mão na compreensão do termo.
 

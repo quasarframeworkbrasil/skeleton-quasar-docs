@@ -6,7 +6,7 @@ description: Cada módulo é um ponto de partida de central para uma estrutura d
 
 Os módulos possuem os recursos base para renderizar a estrutura que será usada para montar todas as suas telas filhas. Para isso serão configurados componentes para fazer a apresentação, rotas, gerenciadores de estado e etc. A aplicação já possui dois módulos criados: Auth e Dashboard.
 
-![](https://github.com/quasarframeworkbrasil/skeleton-quasar-docs/tree/837016d4104c9c9d353b7091e5fbb7e128181839/.gitbook/assets/image-29.png)
+![](../.gitbook/assets/image-29.png)
 
 ## Módulo Auth
 
